@@ -4,6 +4,7 @@ export enum ButtonVariant {
   OUTLINE = 'outline',
   INVERSE = 'inverse',
   PLAIN = 'plain',
+  PLAIN_INVERSE = 'plainInverse',
   LINK = 'link',
   LINK_INVERSE = 'linkInverse',
 }

@@ -81,6 +81,21 @@
   color: var(--color-text-secondary);
 }
 
+.plainInverse {
+  padding: 0;
+  font-size: var(--font-size-body-ms);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text-inverse);
+  outline-color: var(--color-focus-ring-inverse);
+}
+
+.plainInverse:hover {
+  color: var(--color-text-inverse);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .link,
 .linkInverse {
   padding: 0;
