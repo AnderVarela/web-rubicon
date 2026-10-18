@@ -17,6 +17,12 @@
   height: 100%;
   border: 0;
   filter: saturate(0.55) sepia(0.12);
+  opacity: 0;
+  transition: opacity var(--duration-slow) ease-out;
+}
+
+.iframeLoaded {
+  opacity: 1;
 }
 
 .illustration {
@@ -102,6 +108,7 @@
 
 .card {
   position: absolute;
+  z-index: 1;
   left: var(--space-4);
   right: var(--space-4);
   bottom: var(--space-4);
@@ -141,6 +148,12 @@
 @media (min-width: 1024px) {
   .frame {
     aspect-ratio: auto;
-    height: min(calc(100vh - var(--section-scroll-offset, 0px) - 112px), 760px);
+    height: var(--map-height, min(calc(100vh - var(--section-scroll-offset, 0px) - 112px), 760px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iframe {
+    transition: none;
   }
 }
