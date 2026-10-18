@@ -1,0 +1,62 @@
+.catalog {
+  padding: clamp(64px, 7vw, 96px) 0 clamp(56px, 7vw, 96px);
+  background: transparent;
+}
+
+.decoration {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: calc(clamp(64px, 7vw, 96px) - 1px);
+  display: none;
+  width: 100vw;
+  aspect-ratio: 523 / 174;
+  background: var(--color-ink);
+  opacity: 0.32;
+  transform: translate(-50%, -100%);
+  mask: url('@/assets/illustrations/fondo-inicio.svg') center bottom / contain no-repeat;
+  -webkit-mask: url('@/assets/illustrations/fondo-inicio.svg') center bottom / contain no-repeat;
+  pointer-events: none;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: var(--space-5) var(--space-12);
+  align-items: end;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.lead {
+  max-width: 44ch;
+}
+
+.chips {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 calc(-1 * var(--page-gutter));
+  padding: var(--space-1) var(--page-gutter);
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.rows {
+  margin-top: clamp(28px, 4vw, 48px);
+}
+
+@media (min-width: 1024px) {
+  .decoration {
+    display: block;
+  }
+}

@@ -14,6 +14,15 @@ describe('Chip', () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
+  it('salta a la sección de la categoría cuando es un enlace', async () => {
+    const user = userEvent.setup();
+    renderWithProviders(<Chip label={t('common.menu')} count={27} href="#catalogo-palmeritas" />);
+
+    await user.click(screen.getByRole('link', { name: `${t('common.menu')} 27` }));
+
+    expect(window.location.hash).toBe('#catalogo-palmeritas');
+  });
+
   it('funciona como pestaña e indica cuál está seleccionada', () => {
     renderWithProviders(
       <div role="tablist">

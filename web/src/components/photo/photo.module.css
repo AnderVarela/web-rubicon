@@ -42,6 +42,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  transform: scale(var(--photo-zoom, 1));
   transition:
     opacity var(--duration-medium) ease-out,
     transform 0.7s var(--ease-out-soft);
@@ -51,8 +52,8 @@
   opacity: 1;
 }
 
-.zoomed .image {
-  transform: scale(1.04);
+.zoomed {
+  --photo-zoom: 1.04;
 }
 
 .placeholder {
@@ -69,7 +70,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .zoomed .image {
+  .image {
     transform: none;
   }
 }

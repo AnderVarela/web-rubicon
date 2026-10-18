@@ -1,16 +1,16 @@
 import type { ReactElement } from 'react';
 import { render } from '@testing-library/react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, createIntl } from 'react-intl';
 import es from '@i18n/messages/es.json';
 
 export const messages = es as Record<string, string>;
 
+const intl = createIntl({ locale: 'es', messages });
+
+// Texto esperado sacado de los mensajes i18n (con plurales, select e interpolación).
 export const t = (id: string, values?: Record<string, string | number>) => {
-  const message = messages[id];
-  if (message === undefined) throw new Error(`Falta el mensaje ${id}`);
-  return values
-    ? Object.entries(values).reduce((text, [key, value]) => text.replaceAll(`{${key}}`, String(value)), message)
-    : message;
+  if (messages[id] === undefined) throw new Error(`Falta el mensaje ${id}`);
+  return intl.formatMessage({ id }, values) as string;
 };
 
 export const renderWithProviders = (ui: ReactElement) =>

@@ -1,0 +1,28 @@
+.productPrice {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.stacked {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+}
+
+.stacked .note {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.inline {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.amount {
+  font-family: var(--font-family-base);
+}
