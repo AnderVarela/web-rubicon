@@ -1,0 +1,42 @@
+.skeleton {
+  display: block;
+  width: var(--skeleton-width, 100%);
+  height: var(--skeleton-height, 12px);
+  background-size: 300% 100%;
+  animation: rb-shimmer 1.6s ease-in-out infinite;
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+}
+
+.oat {
+  background-image: linear-gradient(100deg, var(--color-skeleton-base) 30%, var(--color-skeleton-highlight) 50%, var(--color-skeleton-base) 70%);
+}
+
+.warm {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-skeleton-warm-base) 30%,
+    var(--color-skeleton-warm-highlight) 50%,
+    var(--color-skeleton-warm-base) 70%
+  );
+}
+
+.sand {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-skeleton-sand-base) 30%,
+    var(--color-skeleton-sand-highlight) 50%,
+    var(--color-skeleton-sand-base) 70%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}

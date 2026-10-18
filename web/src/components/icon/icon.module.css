@@ -1,0 +1,53 @@
+.icon {
+  flex: none;
+  display: block;
+}
+
+.size-xs {
+  width: var(--size-icon-s);
+  height: var(--size-icon-s);
+}
+
+.size-s {
+  width: 16px;
+  height: 16px;
+}
+
+.size-m {
+  width: var(--size-icon-m);
+  height: var(--size-icon-m);
+}
+
+.size-l {
+  width: 20px;
+  height: 20px;
+}
+
+.size-xl {
+  width: var(--size-icon-l);
+  height: var(--size-icon-l);
+}
+
+.tone-current {
+  color: currentColor;
+}
+
+.tone-primary {
+  color: var(--color-text-primary);
+}
+
+.tone-secondary {
+  color: var(--color-text-secondary);
+}
+
+.tone-inverse {
+  color: var(--color-text-inverse);
+}
+
+.tone-inverseMuted {
+  color: var(--color-text-inverse-muted);
+}
+
+.tone-whatsapp {
+  color: var(--color-brand-whatsapp);
+}

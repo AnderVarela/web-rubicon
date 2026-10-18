@@ -1,0 +1,49 @@
+.logo {
+  display: block;
+  background: currentColor;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.wordmark {
+  aspect-ratio: 405 / 116;
+  mask-image: url('@/assets/brand/logo.svg');
+  -webkit-mask-image: url('@/assets/brand/logo.svg');
+}
+
+.wordmarkSlogan {
+  aspect-ratio: 428 / 169;
+  mask-image: url('@/assets/brand/logo-slogan.svg');
+  -webkit-mask-image: url('@/assets/brand/logo-slogan.svg');
+}
+
+.symbol {
+  aspect-ratio: 91 / 98;
+  mask-image: url('@/assets/brand/simbolo.svg');
+  -webkit-mask-image: url('@/assets/brand/simbolo.svg');
+}
+
+.tone-primary {
+  color: var(--color-text-primary);
+}
+
+.tone-inverse {
+  color: var(--color-text-inverse);
+}
+
+.align-start {
+  mask-position: left center;
+  -webkit-mask-position: left center;
+}
+
+.align-center {
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.align-end {
+  mask-position: right center;
+  -webkit-mask-position: right center;
+}

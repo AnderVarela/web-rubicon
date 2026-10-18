@@ -1,4 +1,12 @@
 {
   "app.title": "Panadería Rubicón · Delicadamente pan",
-  "app.description": "Horno de barrio en Fuenlabrada. Pan de masa madre, palmeritas y empanadas hechas cada mañana."
+  "app.description": "Horno de barrio en Fuenlabrada. Pan de masa madre, palmeritas y empanadas hechas cada mañana.",
+  "common.close": "Cerrar",
+  "common.menu": "Menú",
+  "common.loading": "Cargando…",
+  "common.sectionNumber": "N.º {number}",
+  "common.rating": "{rating} de 5 estrellas",
+  "common.opensNewTab": "se abre en una pestaña nueva",
+  "brand.name": "Rubicón",
+  "brand.nameWithSlogan": "Rubicón. Delicadamente pan"
 }

@@ -1,0 +1,22 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.rule {
+  flex: none;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+@media (min-width: 1024px) {
+  .eyebrow {
+    gap: 14px;
+  }
+
+  .rule {
+    width: 32px;
+  }
+}

@@ -1,0 +1,25 @@
+.dot {
+  flex: none;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.open {
+  background: var(--color-status-open);
+}
+
+.closed {
+  background: var(--color-status-closed);
+}
+
+.pulse {
+  animation: rb-pulse 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}

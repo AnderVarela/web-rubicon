@@ -1,0 +1,90 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-sheet-backdrop);
+  padding: 0;
+  border: 0;
+  background: var(--color-backdrop);
+  opacity: 0;
+  cursor: default;
+  transition: opacity var(--duration-medium);
+}
+
+.backdropVisible {
+  opacity: 1;
+}
+
+.dialog {
+  position: fixed;
+  z-index: var(--z-sheet);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transition:
+    transform var(--duration-slow) var(--ease-out-soft),
+    opacity 0.3s;
+}
+
+.dialog:focus-visible {
+  outline: none;
+}
+
+.base {
+  background: var(--color-background-base);
+  color: var(--color-text-primary);
+}
+
+.inverse {
+  background: var(--color-background-inverse);
+  color: var(--color-text-inverse);
+}
+
+/* Panel lateral (escritorio) */
+.side {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(560px, 100vw);
+  transform: translateX(100%);
+}
+
+/* Hoja inferior (móvil) */
+.bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 92vh;
+  transform: translateY(100%);
+}
+
+/* Centrado (configuración de cookies en escritorio) */
+.center {
+  top: 50%;
+  left: 50%;
+  width: min(520px, calc(100vw - 32px));
+  max-height: 90vh;
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 16px));
+}
+
+/* Pantalla completa (menú móvil) */
+.full {
+  inset: 0;
+  z-index: var(--z-menu);
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top);
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.visible.side,
+.visible.bottom,
+.visible.full {
+  opacity: 1;
+  transform: none;
+}
+
+.visible.center {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}

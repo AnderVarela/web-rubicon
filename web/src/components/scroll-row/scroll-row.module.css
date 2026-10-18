@@ -1,0 +1,26 @@
+.scrollRow {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  margin: 0 calc(-1 * var(--page-gutter));
+  padding: var(--space-1) var(--page-gutter) var(--space-2);
+  scroll-padding: 0 var(--page-gutter);
+}
+
+.scrollRow::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollRow > * {
+  scroll-snap-align: start;
+}
+
+.gap-s {
+  gap: var(--space-4);
+}
+
+.gap-m {
+  gap: var(--space-5);
+}
