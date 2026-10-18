@@ -1,5 +1,6 @@
 import { act, screen, within } from '@testing-library/react';
 import { renderWithProviders, t } from '@test/render-with-providers';
+import { CONSENT_STORAGE_KEY, ConsentChoice, consentStore } from '@hooks/use-consent';
 import { Home } from '@screens/home';
 
 // Sin motor de maquetación en jsdom: se simula la posición de las secciones (API del navegador).
@@ -27,6 +28,11 @@ const scrollPage = async () => {
 };
 
 describe('useActiveSection', () => {
+  beforeEach(() => {
+    window.localStorage.setItem(CONSENT_STORAGE_KEY, ConsentChoice.TECHNICAL);
+    consentStore.reset();
+  });
+
   it('cambia la sección marcada en la barra inferior a medida que el usuario baja', async () => {
     const tops: Record<string, number> = { catalogo: 900, nosotros: 2000 };
     placeSections(tops);

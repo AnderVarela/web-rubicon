@@ -7,6 +7,10 @@
   background: var(--color-background-base);
 }
 
+.withBanner {
+  padding-bottom: 240px;
+}
+
 .top {
   position: relative;
   z-index: var(--z-header);
@@ -23,7 +27,8 @@
 }
 
 @media (min-width: 1024px) {
-  .home {
+  .home,
+  .withBanner {
     --section-scroll-offset: var(--size-header);
 
     padding-bottom: 0;

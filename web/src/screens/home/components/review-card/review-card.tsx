@@ -47,7 +47,7 @@ export const ReviewCard = ({ review, now, tone = AvatarTone.PEACH }: ReviewCardP
             {intl.formatMessage({ id: expanded ? REVIEW_CARD_MESSAGES.less : REVIEW_CARD_MESSAGES.more })}
           </Button>
         )}
-        <footer className={styles.footer}>
+        <div className={styles.footer}>
           <Avatar name={review.autor} tone={tone} />
           <span className={styles.author}>
             <Text kind={TypographyKinds.SPAN} variant={TypographyVariant.BODY_S} weight={TypographyWeight.SEMIBOLD}>
@@ -57,7 +57,7 @@ export const ReviewCard = ({ review, now, tone = AvatarTone.PEACH }: ReviewCardP
               {intl.formatRelativeTime(age.value, age.unit, { numeric: age.value === 0 ? 'auto' : 'always' })}
             </Text>
           </span>
-        </footer>
+        </div>
       </article>
     </li>
   );

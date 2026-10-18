@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { SkipLink } from '@components/skip-link';
+import { CookieBanner } from '@screens/components/cookie-banner';
+import { CookieSettings } from '@screens/components/cookie-settings';
+import { SiteFooter } from '@screens/components/site-footer';
 import { CONTENT } from '@/content';
+import { useConsent } from '@hooks/use-consent';
 import { useNow } from '@hooks/use-now';
 import { getZonedNow } from '@hooks/use-store-status';
 import { About } from '@screens/home/components/about';
@@ -11,6 +15,7 @@ import { MobileDock } from '@screens/home/components/mobile-dock';
 import { MobileMenu } from '@screens/home/components/mobile-menu';
 import { NoticeBar } from '@screens/home/components/notice-bar';
 import { Reviews } from '@screens/home/components/reviews';
+import { Visit } from '@screens/home/components/visit';
 import { SiteHeader } from '@screens/home/components/site-header';
 import { useActiveSection } from '@screens/home/hooks/use-active-section';
 import styles from './home.module.css';
@@ -23,6 +28,8 @@ export const Home = () => {
   const { activeId, scrolled } = useActiveSection();
   const [noticeClosed, setNoticeClosed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { decided, settingsOpen } = useConsent();
+  const bannerVisible = !decided && !settingsOpen;
   const { aviso, horario } = CONTENT;
   useEffect(() => {
     scrollToLocationHash(document, window.location.hash);
@@ -31,7 +38,7 @@ export const Home = () => {
   const showNotice = isNoticeActive(aviso, getZonedNow(now, horario.zonaHoraria).isoDate) && !noticeClosed;
 
   return (
-    <div className={[styles.home, showNotice && styles.withNotice].filter(Boolean).join(' ')}>
+    <div className={[styles.home, showNotice && styles.withNotice, bannerVisible && styles.withBanner].filter(Boolean).join(' ')}>
       <SkipLink targetId={MAIN_CONTENT_ID} label={formatMessage({ id: HOME_MESSAGES.skipToContent })} />
       <div className={styles.top}>
         {showNotice && aviso && <NoticeBar text={aviso.texto} onClose={() => setNoticeClosed(true)} />}
@@ -42,9 +49,13 @@ export const Home = () => {
         <Catalog />
         <About />
         <Reviews />
+        <Visit />
       </main>
-      <MobileDock activeId={activeId} menuOpen={menuOpen} onOpenMenu={() => setMenuOpen(true)} />
+      <SiteFooter />
+      {!bannerVisible && <MobileDock activeId={activeId} menuOpen={menuOpen} onOpenMenu={() => setMenuOpen(true)} />}
       <MobileMenu open={menuOpen} activeId={activeId} onClose={() => setMenuOpen(false)} />
+      <CookieBanner />
+      <CookieSettings />
     </div>
   );
 };
