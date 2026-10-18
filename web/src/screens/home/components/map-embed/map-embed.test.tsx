@@ -42,14 +42,19 @@ describe('MapEmbed', () => {
     expect(screen.getByRole('link', { name: t('map.open') })).toHaveAttribute('target', '_blank');
   });
 
-  it('quita el aviso si el mapa acaba cargando tarde', () => {
-    vi.useFakeTimers();
+  it('retira el mapa al agotarse la espera para que el error del navegador no llegue a verse, y deja reintentar', async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
     allowMaps();
+    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     renderWithProviders(<MapEmbed />);
 
     act(() => vi.advanceTimersByTime(MAP_LOAD_TIMEOUT_MS));
-    fireEvent.load(screen.getByTitle(t('map.title')));
+    expect(screen.queryByTitle(t('map.title'))).not.toBeInTheDocument();
+    expect(screen.queryByText(t('map.loaded'))).not.toBeInTheDocument();
 
+    await user.click(screen.getByRole('button', { name: t('map.retry') }));
     expect(screen.queryByRole('status')).not.toBeInTheDocument();
+    fireEvent.load(screen.getByTitle(t('map.title')));
+    expect(screen.getByText(t('map.loaded'))).toBeInTheDocument();
   });
 });

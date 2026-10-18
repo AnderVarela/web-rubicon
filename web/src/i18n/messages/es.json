@@ -238,5 +238,6 @@
   "notFound.pageTitle": "Página no encontrada · Panadería Rubicón",
   "notFound.section": "Página no encontrada",
   "notFound.catalog": "Ver nuestro pan",
-  "map.failed": "No hemos podido cargar el mapa de Google. Puedes abrirlo directamente en Google Maps."
+  "map.failed": "No hemos podido cargar el mapa de Google. Puedes abrirlo directamente en Google Maps.",
+  "map.retry": "Reintentar"
 }

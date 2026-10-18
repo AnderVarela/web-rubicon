@@ -238,5 +238,6 @@
   "notFound.pageTitle": "Page not found · Panadería Rubicón",
   "notFound.section": "Page not found",
   "notFound.catalog": "See our bread",
-  "map.failed": "We could not load the Google map. You can open it directly in Google Maps."
+  "map.failed": "We could not load the Google map. You can open it directly in Google Maps.",
+  "map.retry": "Try again"
 }
