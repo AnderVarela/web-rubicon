@@ -10,7 +10,8 @@ const intl = createIntl({ locale: 'es', messages });
 // Texto esperado sacado de los mensajes i18n (con plurales, select e interpolación).
 export const t = (id: string, values?: Record<string, string | number>) => {
   if (messages[id] === undefined) throw new Error(`Falta el mensaje ${id}`);
-  return intl.formatMessage({ id }, values) as string;
+  const rich = { em: (chunks: string[]) => chunks.join('') };
+  return String(intl.formatMessage({ id }, { ...rich, ...values }));
 };
 
 export const renderWithProviders = (ui: ReactElement) =>

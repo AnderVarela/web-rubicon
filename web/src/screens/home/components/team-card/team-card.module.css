@@ -1,0 +1,52 @@
+.teamCard {
+  flex: 0 0 clamp(200px, 52vw, 260px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.noPhoto {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-background-base);
+}
+
+.circle {
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-peach);
+}
+
+.initial {
+  position: relative;
+  font-family: var(--font-family-display);
+  font-style: italic;
+  font-weight: var(--font-weight-light);
+  font-size: clamp(64px, 8vw, 96px);
+  line-height: 1;
+  color: var(--color-text-primary);
+}
+
+.wheat {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  opacity: 0.7;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.description {
+  margin-top: var(--space-1);
+}
