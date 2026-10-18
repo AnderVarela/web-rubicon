@@ -1,0 +1,13 @@
+.section {
+  position: relative;
+  padding: var(--space-section) 0;
+  scroll-margin-top: var(--section-scroll-offset, 0px);
+}
+
+.base {
+  background: var(--color-background-base);
+}
+
+.subtle {
+  background: var(--color-background-subtle);
+}
