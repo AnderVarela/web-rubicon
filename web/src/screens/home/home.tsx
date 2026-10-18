@@ -4,11 +4,13 @@ import { SkipLink } from '@components/skip-link';
 import { CONTENT } from '@/content';
 import { useNow } from '@hooks/use-now';
 import { getZonedNow } from '@hooks/use-store-status';
+import { About } from '@screens/home/components/about';
 import { Catalog } from '@screens/home/components/catalog';
 import { Hero } from '@screens/home/components/hero';
 import { MobileDock } from '@screens/home/components/mobile-dock';
 import { MobileMenu } from '@screens/home/components/mobile-menu';
 import { NoticeBar } from '@screens/home/components/notice-bar';
+import { Reviews } from '@screens/home/components/reviews';
 import { SiteHeader } from '@screens/home/components/site-header';
 import { useActiveSection } from '@screens/home/hooks/use-active-section';
 import styles from './home.module.css';
@@ -38,6 +40,8 @@ export const Home = () => {
       <main id={MAIN_CONTENT_ID} tabIndex={-1} className={styles.main}>
         <Hero />
         <Catalog />
+        <About />
+        <Reviews />
       </main>
       <MobileDock activeId={activeId} menuOpen={menuOpen} onOpenMenu={() => setMenuOpen(true)} />
       <MobileMenu open={menuOpen} activeId={activeId} onClose={() => setMenuOpen(false)} />

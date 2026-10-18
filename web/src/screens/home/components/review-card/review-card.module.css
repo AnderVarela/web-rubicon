@@ -1,0 +1,63 @@
+.reviewCard {
+  flex: 0 0 clamp(272px, 80vw, 340px);
+  display: flex;
+  min-width: 0;
+}
+
+.article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(24px, 2.4vw, 32px);
+  background: var(--color-background-subtle);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.google {
+  opacity: 0.75;
+}
+
+.quote {
+  margin: 0;
+}
+
+.text {
+  margin-left: -0.5em;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.toggle {
+  align-self: flex-start;
+  margin: -8px 0 -12px;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
