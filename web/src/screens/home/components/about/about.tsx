@@ -1,6 +1,7 @@
 import { useIntl } from 'react-intl';
 import { renderEmphasis } from '@components/emphasis';
 import { ScrollRow, ScrollRowGap } from '@components/scroll-row';
+import { Reveal } from '@components/reveal';
 import { Section, SectionTone } from '@components/section';
 import { SectionHeading } from '@components/section-heading';
 import { Text, TypographyKinds, TypographyVariant } from '@components/text';
@@ -17,11 +18,13 @@ export const About = () => {
 
   return (
     <Section id={SectionId.ABOUT} labelledBy={ABOUT_TITLE_ID} tone={SectionTone.SUBTLE}>
-      <SectionHeading
-        label={formatMessage({ id: ABOUT_MESSAGES.section })}
-        number={formatMessage({ id: ABOUT_MESSAGES.number }, { number: ABOUT_NUMBER })}
-      />
-      <div className={styles.intro}>
+      <Reveal>
+        <SectionHeading
+          label={formatMessage({ id: ABOUT_MESSAGES.section })}
+          number={formatMessage({ id: ABOUT_MESSAGES.number }, { number: ABOUT_NUMBER })}
+        />
+      </Reveal>
+      <Reveal delay={80} className={styles.intro}>
         <Text kind={TypographyKinds.H2} variant={TypographyVariant.DISPLAY} id={ABOUT_TITLE_ID}>
           {equipo.length
             ? formatMessage({ id: ABOUT_MESSAGES.title }, { count: String(equipo.length), em: renderEmphasis })
@@ -31,13 +34,15 @@ export const About = () => {
           <Text variant={TypographyVariant.BODY_M}>{formatMessage({ id: ABOUT_MESSAGES.p1 })}</Text>
           <Text variant={TypographyVariant.BODY_M}>{formatMessage({ id: ABOUT_MESSAGES.p2 })}</Text>
         </div>
-      </div>
+      </Reveal>
       {equipo.length > 0 && (
-        <ScrollRow role="list" label={formatMessage({ id: ABOUT_MESSAGES.team })} gap={ScrollRowGap.S} focusable desktopColumns={getTeamColumns(equipo.length)} className={styles.team}>
-          {equipo.map((person) => (
-            <TeamCard key={person.id} person={person} />
-          ))}
-        </ScrollRow>
+        <Reveal delay={120}>
+          <ScrollRow role="list" label={formatMessage({ id: ABOUT_MESSAGES.team })} gap={ScrollRowGap.S} focusable desktopColumns={getTeamColumns(equipo.length)} className={styles.team}>
+            {equipo.map((person) => (
+              <TeamCard key={person.id} person={person} />
+            ))}
+          </ScrollRow>
+        </Reveal>
       )}
     </Section>
   );

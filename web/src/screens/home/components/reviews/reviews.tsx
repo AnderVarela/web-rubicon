@@ -3,6 +3,7 @@ import { Button, ButtonSize, ButtonVariant, IconPosition } from '@components/but
 import { renderEmphasis } from '@components/emphasis';
 import { Icon, IconName, IconSize } from '@components/icon';
 import { ScrollRow, ScrollRowGap } from '@components/scroll-row';
+import { Reveal } from '@components/reveal';
 import { Section } from '@components/section';
 import { SectionHeading } from '@components/section-heading';
 import { StarRating, StarRatingSize } from '@components/star-rating';
@@ -23,12 +24,14 @@ export const Reviews = () => {
 
   return (
     <Section id={SectionId.REVIEWS} labelledBy={REVIEWS_TITLE_ID} containerClassName={styles.grid}>
-      <SectionHeading
-        label={intl.formatMessage({ id: REVIEWS_MESSAGES.section })}
-        number={intl.formatMessage({ id: REVIEWS_MESSAGES.number }, { number: REVIEWS_NUMBER })}
-        className={styles.heading}
-      />
-      <div className={styles.summary}>
+      <Reveal className={styles.heading}>
+        <SectionHeading
+          label={intl.formatMessage({ id: REVIEWS_MESSAGES.section })}
+          number={intl.formatMessage({ id: REVIEWS_MESSAGES.number }, { number: REVIEWS_NUMBER })}
+          className={styles.headingBar}
+        />
+      </Reveal>
+      <Reveal delay={60} className={styles.summary}>
         <Text kind={TypographyKinds.H2} variant={TypographyVariant.DISPLAY} id={REVIEWS_TITLE_ID}>
           {intl.formatMessage({ id: REVIEWS_MESSAGES.title }, { em: renderEmphasis })}
         </Text>
@@ -57,13 +60,15 @@ export const Reviews = () => {
         <Text variant={TypographyVariant.CAPTION} tone={TypographyTone.SECONDARY} className={styles.disclaimer}>
           {intl.formatMessage({ id: REVIEWS_MESSAGES.disclaimer })}
         </Text>
-      </div>
+      </Reveal>
       {lista.length ? (
-        <ScrollRow role="list" label={intl.formatMessage({ id: REVIEWS_MESSAGES.list })} gap={ScrollRowGap.S} focusable desktopColumns={REVIEWS_DESKTOP_COLUMNS} className={styles.list}>
-          {lista.map((review, index) => (
-            <ReviewCard key={`${review.autor}-${review.publicadaEn}`} review={review} now={now} tone={getAvatarTone(index)} />
-          ))}
-        </ScrollRow>
+        <Reveal delay={140} className={styles.listWrap}>
+          <ScrollRow role="list" label={intl.formatMessage({ id: REVIEWS_MESSAGES.list })} gap={ScrollRowGap.S} focusable desktopColumns={REVIEWS_DESKTOP_COLUMNS} className={styles.list}>
+            {lista.map((review, index) => (
+              <ReviewCard key={`${review.autor}-${review.publicadaEn}`} review={review} now={now} tone={getAvatarTone(index)} />
+            ))}
+          </ScrollRow>
+        </Reveal>
       ) : (
         <Text variant={TypographyVariant.BODY_L} className={styles.empty}>
           {intl.formatMessage({ id: REVIEWS_MESSAGES.empty })}

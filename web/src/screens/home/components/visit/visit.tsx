@@ -3,6 +3,7 @@ import { ActionRow } from '@components/action-row';
 import { Button, ButtonSize, ButtonVariant } from '@components/button';
 import { renderEmphasis } from '@components/emphasis';
 import { Icon, IconName, IconSize, IconTone } from '@components/icon';
+import { Reveal } from '@components/reveal';
 import { Section, SectionTone } from '@components/section';
 import { SectionHeading } from '@components/section-heading';
 import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@components/text';
@@ -20,14 +21,18 @@ export const Visit = () => {
 
   return (
     <Section id={SectionId.VISIT} labelledBy={VISIT_TITLE_ID} tone={SectionTone.SUBTLE}>
-      <SectionHeading
-        label={formatMessage({ id: VISIT_MESSAGES.section })}
-        number={formatMessage({ id: VISIT_MESSAGES.number }, { number: VISIT_NUMBER })}
-      />
-      <Text kind={TypographyKinds.H2} variant={TypographyVariant.DISPLAY} id={VISIT_TITLE_ID} className={styles.title}>
-        {formatMessage({ id: VISIT_MESSAGES.title }, { em: renderEmphasis })}
-      </Text>
-      <div className={styles.grid}>
+      <Reveal>
+        <SectionHeading
+          label={formatMessage({ id: VISIT_MESSAGES.section })}
+          number={formatMessage({ id: VISIT_MESSAGES.number }, { number: VISIT_NUMBER })}
+        />
+      </Reveal>
+      <Reveal delay={60}>
+        <Text kind={TypographyKinds.H2} variant={TypographyVariant.DISPLAY} id={VISIT_TITLE_ID} className={styles.title}>
+          {formatMessage({ id: VISIT_MESSAGES.title }, { em: renderEmphasis })}
+        </Text>
+      </Reveal>
+      <Reveal delay={120} className={styles.grid}>
         <div className={styles.info}>
           <div>
             <div className={styles.actions}>
@@ -91,7 +96,7 @@ export const Visit = () => {
         <div className={styles.map}>
           <MapEmbed />
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 };

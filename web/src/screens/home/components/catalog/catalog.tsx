@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl';
 import { Chip } from '@components/chip';
 import { renderEmphasis } from '@components/emphasis';
 import { Icon, IconName, IconSize, IconTone } from '@components/icon';
+import { Reveal } from '@components/reveal';
 import { Section } from '@components/section';
 import { SectionHeading } from '@components/section-heading';
 import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@components/text';
@@ -22,18 +23,20 @@ export const Catalog = () => {
   return (
     <Section id={SectionId.CATALOG} labelledBy={CATALOG_TITLE_ID} className={styles.catalog}>
       <span aria-hidden="true" className={styles.decoration} />
-      <SectionHeading
-        label={formatMessage({ id: CATALOG_MESSAGES.section })}
-        number={formatMessage({ id: CATALOG_MESSAGES.number }, { number: CATALOG_NUMBER })}
-      />
-      <div className={styles.intro}>
+      <Reveal>
+        <SectionHeading
+          label={formatMessage({ id: CATALOG_MESSAGES.section })}
+          number={formatMessage({ id: CATALOG_MESSAGES.number }, { number: CATALOG_NUMBER })}
+        />
+      </Reveal>
+      <Reveal delay={80} className={styles.intro}>
         <Text kind={TypographyKinds.H2} variant={TypographyVariant.DISPLAY} id={CATALOG_TITLE_ID}>
           {formatMessage({ id: CATALOG_MESSAGES.title }, { em: renderEmphasis })}
         </Text>
         <Text variant={TypographyVariant.BODY_M} className={styles.lead}>
           {formatMessage({ id: CATALOG_MESSAGES.intro })}
         </Text>
-      </div>
+      </Reveal>
       {catalogo.length ? (
         <>
           <nav aria-label={formatMessage({ id: CATALOG_MESSAGES.categories })} className={styles.chips}>
@@ -47,7 +50,9 @@ export const Catalog = () => {
           </Text>
           <div className={styles.rows}>
             {catalogo.map((categoria) => (
-              <CategoryRow key={categoria.id} category={categoria} onOpenProduct={setSelected} />
+              <Reveal key={categoria.id}>
+                <CategoryRow category={categoria} onOpenProduct={setSelected} />
+              </Reveal>
             ))}
           </div>
         </>
