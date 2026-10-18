@@ -11,3 +11,7 @@
 .subtle {
   background: var(--color-background-subtle);
 }
+
+.transparent {
+  background: transparent;
+}

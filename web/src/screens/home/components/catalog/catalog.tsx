@@ -4,7 +4,7 @@ import { Chip } from '@components/chip';
 import { renderEmphasis } from '@components/emphasis';
 import { Icon, IconName, IconSize, IconTone } from '@components/icon';
 import { Reveal } from '@components/reveal';
-import { Section } from '@components/section';
+import { Section, SectionTone } from '@components/section';
 import { SectionHeading } from '@components/section-heading';
 import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@components/text';
 import { CONTENT, type Producto } from '@/content';
@@ -21,7 +21,7 @@ export const Catalog = () => {
   const { catalogo } = CONTENT;
 
   return (
-    <Section id={SectionId.CATALOG} labelledBy={CATALOG_TITLE_ID} className={styles.catalog}>
+    <Section id={SectionId.CATALOG} labelledBy={CATALOG_TITLE_ID} tone={SectionTone.TRANSPARENT} className={styles.catalog}>
       <span aria-hidden="true" className={styles.decoration} />
       <Reveal>
         <SectionHeading
