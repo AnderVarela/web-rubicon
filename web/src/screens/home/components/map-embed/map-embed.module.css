@@ -1,0 +1,146 @@
+.mapEmbed {
+  min-width: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--color-background-placeholder);
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(0.55) sepia(0.12);
+}
+
+.illustration {
+  position: absolute;
+  inset: 0;
+}
+
+.street {
+  position: absolute;
+  background: var(--color-background-base);
+}
+
+.streetA {
+  left: -10%;
+  right: -10%;
+  top: 38%;
+  height: 14px;
+  transform: rotate(-8deg);
+}
+
+.streetB {
+  left: -10%;
+  right: -10%;
+  top: 70%;
+  height: 8px;
+  transform: rotate(4deg);
+}
+
+.streetC {
+  top: -10%;
+  bottom: -10%;
+  left: 30%;
+  width: 10px;
+  transform: rotate(12deg);
+}
+
+.streetD {
+  top: -10%;
+  bottom: -10%;
+  left: 68%;
+  width: 16px;
+  transform: rotate(-6deg);
+}
+
+.streetE {
+  top: -10%;
+  bottom: -10%;
+  left: 84%;
+  width: 6px;
+  transform: rotate(20deg);
+}
+
+.park {
+  position: absolute;
+  background: var(--color-sage);
+}
+
+.parkA {
+  left: 6%;
+  top: 6%;
+  width: 20%;
+  height: 24%;
+}
+
+.parkB {
+  left: 74%;
+  top: 76%;
+  width: 22%;
+  height: 18%;
+}
+
+.pin {
+  position: absolute;
+  left: 52%;
+  top: 46%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  box-shadow: var(--shadow-pin);
+}
+
+.card {
+  position: absolute;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-4);
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: var(--space-5);
+  background: var(--color-background-base);
+  box-shadow: var(--shadow-card);
+}
+
+.notice {
+  display: flex;
+  gap: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.open {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.caption {
+  margin-top: var(--space-3);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+@media (min-width: 1024px) {
+  .frame {
+    aspect-ratio: auto;
+    height: min(calc(100vh - var(--section-scroll-offset, 0px) - 112px), 760px);
+  }
+}

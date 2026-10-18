@@ -1,0 +1,57 @@
+.cookieBanner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-cookie-banner);
+  padding: var(--space-5) var(--space-5) calc(var(--space-5) + env(safe-area-inset-bottom));
+  background: var(--color-background-base);
+  border: 1px solid var(--color-line-medium);
+  box-shadow: var(--shadow-floating);
+  animation: rb-rise 0.5s var(--ease-out-soft) backwards;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.text {
+  margin-bottom: var(--space-4);
+  line-height: 1.55;
+}
+
+.policy {
+  display: inline;
+  font-weight: var(--font-weight-regular);
+  text-underline-offset: 3px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.action {
+  justify-content: center;
+  padding: 0 10px;
+  font-size: var(--font-size-body-s);
+}
+
+@media (min-width: 1024px) {
+  .cookieBanner {
+    left: var(--space-6);
+    right: auto;
+    bottom: var(--space-6);
+    width: 440px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookieBanner {
+    animation: none;
+  }
+}

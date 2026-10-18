@@ -2,6 +2,7 @@ import { screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithProviders, t } from '@test/render-with-providers';
 import { CONTENT, type Aviso } from '@/content';
+import { CONSENT_STORAGE_KEY, ConsentChoice, consentStore } from '@hooks/use-consent';
 import { Home } from './home';
 
 const withNotice = (aviso: Aviso | null) => {
@@ -12,8 +13,25 @@ const withNotice = (aviso: Aviso | null) => {
   };
 };
 
+const decideCookies = () => {
+  window.localStorage.setItem(CONSENT_STORAGE_KEY, ConsentChoice.TECHNICAL);
+  consentStore.reset();
+};
+
 describe('Home', () => {
+  it('en la primera visita pregunta por las cookies antes de mostrar la barra inferior', async () => {
+    const user = userEvent.setup();
+    renderWithProviders(<Home />);
+
+    expect(screen.queryByRole('button', { name: t('menu.open') })).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: t('cookies.reject') }));
+
+    expect(screen.getByRole('button', { name: t('menu.open') })).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+  });
+
   it('en móvil, el visitante abre el menú, salta a «Nosotros» y vuelve a la página', async () => {
+    decideCookies();
     const user = userEvent.setup();
     renderWithProviders(<Home />);
 

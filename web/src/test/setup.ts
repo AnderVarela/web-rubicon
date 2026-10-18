@@ -1,10 +1,12 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
+import { consentStore } from '@hooks/use-consent';
 
 afterEach(() => {
   cleanup();
   document.body.removeAttribute('data-scroll-lock');
   window.localStorage.clear();
+  consentStore.reset();
 });
 
 // jsdom no implementa estas APIs del navegador: son límites externos y se simulan.
