@@ -18,6 +18,7 @@ import { Reviews } from '@screens/home/components/reviews';
 import { Visit } from '@screens/home/components/visit';
 import { SiteHeader } from '@screens/home/components/site-header';
 import { useActiveSection } from '@screens/home/hooks/use-active-section';
+import { useSectionHash } from '@screens/home/hooks/use-section-hash';
 import styles from './home.module.css';
 import { HOME_MESSAGES, MAIN_CONTENT_ID } from './home.const';
 import { isNoticeActive, scrollToLocationHash } from './home.helper';
@@ -34,6 +35,7 @@ export const Home = () => {
   useEffect(() => {
     scrollToLocationHash(document, window.location.hash);
   }, []);
+  useSectionHash(activeId);
 
   const showNotice = isNoticeActive(aviso, getZonedNow(now, horario.zonaHoraria).isoDate) && !noticeClosed;
 

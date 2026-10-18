@@ -7,6 +7,7 @@ afterEach(() => {
   document.body.removeAttribute('data-scroll-lock');
   window.localStorage.clear();
   consentStore.reset();
+  window.history.replaceState(null, '', '/');
 });
 
 // jsdom no implementa estas APIs del navegador: son límites externos y se simulan.
@@ -26,6 +27,12 @@ if (!window.matchMedia) {
 
 if (!window.scrollTo || String(window.scrollTo).includes('notImplemented')) {
   window.scrollTo = () => undefined;
+}
+
+if (!Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = function scrollIntoView() {
+    return undefined;
+  };
 }
 
 if (!Element.prototype.scrollBy) {
