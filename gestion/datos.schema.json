@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "datos.schema.json",
+  "title": "Datos de trabajo de la app de gestión de Panadería Rubicón",
+  "description": "Estado completo que la app guarda en local, incluido lo oculto y las reseñas no seleccionadas. No se publica: de aquí se genera contenido/web.json al exportar. El orden de los arrays es el orden en la web.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "portada", "aviso", "catalogo", "horario", "equipo", "resenas", "contacto"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 2, "description": "Versión del formato; sube si cambia de forma incompatible" },
+
+    "portada": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["linea"],
+      "properties": {
+        "linea": { "type": "string", "maxLength": 80, "description": "Línea pequeña sobre el logo" }
+      }
+    },
+
+    "aviso": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["activo", "texto", "hasta"],
+      "properties": {
+        "activo": { "type": "boolean" },
+        "texto": { "type": "string", "maxLength": 140 },
+        "hasta": {
+          "description": "Último día en que se muestra; null = hasta que se apague",
+          "oneOf": [{ "$ref": "#/$defs/fecha" }, { "type": "null" }]
+        }
+      }
+    },
+
+    "catalogo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["categorias"],
+      "properties": {
+        "categorias": { "type": "array", "items": { "$ref": "#/$defs/categoria" } }
+      }
+    },
+
+    "horario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zonaHoraria", "semana", "excepciones"],
+      "properties": {
+        "zonaHoraria": { "type": "string", "examples": ["Europe/Madrid"] },
+        "semana": { "$ref": "#/$defs/semana" },
+        "excepciones": {
+          "description": "Días con un horario distinto al de la semana (festivos, cierres o aperturas extraordinarias), ordenados por fecha",
+          "type": "array",
+          "items": { "$ref": "#/$defs/excepcion" }
+        }
+      }
+    },
+
+    "equipo": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "nombre", "puesto", "descripcion", "foto"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "nombre": { "type": "string", "minLength": 1, "maxLength": 60 },
+          "puesto": { "type": "string", "maxLength": 60 },
+          "descripcion": { "type": "string", "maxLength": 140 },
+          "foto": { "$ref": "#/$defs/foto" },
+          "encuadre": {
+            "description": "Encuadre 1:1 de la foto en Nosotros; ausente o null = centrada",
+            "oneOf": [{ "$ref": "#/$defs/encuadre" }, { "type": "null" }]
+          }
+        }
+      }
+    },
+
+    "resenas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valoracion", "total", "sincronizadasEn", "lista"],
+      "properties": {
+        "valoracion": { "type": ["number", "null"], "minimum": 1, "maximum": 5 },
+        "total": { "type": "integer", "minimum": 0 },
+        "sincronizadasEn": { "type": ["string", "null"], "format": "date-time" },
+        "lista": {
+          "description": "Todas las reseñas traídas de Google, de la más reciente a la más antigua. Solo se exportan las que tienen enWeb = true (6 como máximo).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "autor", "puntuacion", "texto", "publicadaEn", "enWeb"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1, "description": "Identificador de la reseña en Google" },
+              "autor": { "type": "string" },
+              "puntuacion": { "type": "integer", "minimum": 1, "maximum": 5 },
+              "texto": { "type": "string" },
+              "publicadaEn": { "type": "string", "format": "date-time" },
+              "enWeb": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
+
+    "contacto": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["direccion", "localidad", "telefono", "whatsapp", "email", "instagram", "facebook", "tiktok", "googlePlaceId", "googleMapsUrl"],
+      "properties": {
+        "direccion": { "type": "string", "maxLength": 120 },
+        "localidad": { "type": "string", "maxLength": 80 },
+        "telefono": { "type": "string", "maxLength": 20 },
+        "whatsapp": { "type": "string", "maxLength": 20 },
+        "email": { "type": "string", "maxLength": 120 },
+        "instagram": { "type": "string", "maxLength": 200, "description": "Vacío = no se muestra el icono" },
+        "facebook": { "type": "string", "maxLength": 200 },
+        "tiktok": { "type": "string", "maxLength": 200 },
+        "googlePlaceId": { "type": "string", "description": "No se edita desde la app; de aquí salen los enlaces de reseñas" },
+        "googleMapsUrl": { "type": "string", "description": "No se edita desde la app; enlace de «Cómo llegar»" }
+      }
+    }
+  },
+
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "maxLength": 60 },
+    "fecha": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "hora": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+    "foto": {
+      "description": "Ruta relativa a la carpeta de datos de la app, o null si no hay foto",
+      "oneOf": [{ "type": "string", "pattern": "^imagenes/(productos|equipo)/[a-z0-9][a-z0-9._-]*$" }, { "type": "null" }]
+    },
+
+    "encuadre": {
+      "description": "Qué parte de la foto se ve en un marco. x e y son el centro del recorte (0 a 1 sobre la foto) y zoom cuánto se acerca (1 = el recorte más grande que cabe)",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "zoom"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "zoom": { "type": "number", "minimum": 1, "maximum": 4 }
+      }
+    },
+
+    "franja": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["abre", "cierra"],
+      "properties": {
+        "abre": { "$ref": "#/$defs/hora" },
+        "cierra": { "$ref": "#/$defs/hora" }
+      }
+    },
+    "franjas": {
+      "description": "Tramos en los que se abre, ordenados y sin solaparse; vacío = cerrado",
+      "type": "array",
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/franja" }
+    },
+    "semana": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"],
+      "properties": {
+        "lunes": { "$ref": "#/$defs/franjas" },
+        "martes": { "$ref": "#/$defs/franjas" },
+        "miercoles": { "$ref": "#/$defs/franjas" },
+        "jueves": { "$ref": "#/$defs/franjas" },
+        "viernes": { "$ref": "#/$defs/franjas" },
+        "sabado": { "$ref": "#/$defs/franjas" },
+        "domingo": { "$ref": "#/$defs/franjas" }
+      }
+    },
+    "excepcion": {
+      "description": "abierto: false = cerrado todo el día; abierto: true = abre con su propio horario",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fecha", "abierto", "motivo"],
+      "properties": {
+        "fecha": { "$ref": "#/$defs/fecha" },
+        "abierto": { "type": "boolean" },
+        "horario": { "$ref": "#/$defs/franjas", "minItems": 1 },
+        "motivo": { "type": "string", "maxLength": 80 }
+      },
+      "if": { "properties": { "abierto": { "const": true } } },
+      "then": { "required": ["horario"] },
+      "else": { "not": { "required": ["horario"] } }
+    },
+
+    "categoria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nombre", "visible", "productos"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id", "description": "También es el ancla en la web: #catalogo-{id}. No cambia al renombrar." },
+        "nombre": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "visible": { "type": "boolean" },
+        "productos": { "type": "array", "items": { "$ref": "#/$defs/producto" } }
+      }
+    },
+
+    "producto": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nombre", "descripcionCorta", "descripcionLarga", "sinPrecio", "precio", "unidad", "etiqueta", "ingredientes", "alergenos", "foto", "visible"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "nombre": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "descripcionCorta": { "type": "string", "maxLength": 90, "description": "Tarjeta del catálogo" },
+        "descripcionLarga": { "type": "string", "maxLength": 2000, "description": "Ficha; vacía = se usa la corta" },
+        "sinPrecio": { "type": "boolean", "description": "La web muestra «Consultar en tienda»" },
+        "precio": { "type": ["number", "null"], "minimum": 0, "maximum": 9999.99, "description": "Euros, IVA incluido" },
+        "unidad": { "enum": ["unidad", "cuarto_kg", "kg", "docena", "racion"] },
+        "etiqueta": { "enum": [null, "novedad", "temporada", "fin_de_semana"] },
+        "ingredientes": { "type": "string", "maxLength": 2000, "description": "Los alérgenos van entre **asteriscos**" },
+        "alergenos": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["gluten", "crustaceos", "huevos", "pescado", "cacahuetes", "soja", "leche", "frutos", "apio", "mostaza", "sesamo", "sulfitos", "altramuces", "moluscos"]
+          }
+        },
+        "foto": { "$ref": "#/$defs/foto" },
+        "encuadre": {
+          "description": "Encuadre de la foto en cada marco de la web; ausente o null = centrada",
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["tarjeta", "ficha"],
+              "properties": {
+                "tarjeta": { "$ref": "#/$defs/encuadre", "description": "Tarjeta del catálogo, 1:1" },
+                "ficha": { "$ref": "#/$defs/encuadre", "description": "Ficha del producto, 4:3" }
+              }
+            }
+          ]
+        },
+        "visible": { "type": "boolean" }
+      },
+      "if": { "properties": { "sinPrecio": { "const": false } } },
+      "then": { "properties": { "precio": { "type": "number" } } }
+    }
+  }
+}

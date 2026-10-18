@@ -1,0 +1,185 @@
+{
+  "$schema": "./web.schema.json",
+  "version": 2,
+  "generadoEn": "2026-10-18T10:00:00Z",
+  "portada": {
+    "linea": "Horno de barrio · Fuenlabrada · desde 1987"
+  },
+  "aviso": null,
+  "catalogo": [
+    {
+      "id": "panes",
+      "nombre": "Panes",
+      "productos": [
+        {
+          "id": "pan-de-masa-madre",
+          "nombre": "Pan de masa madre",
+          "descripcion": "Corteza crujiente y miga abierta. 48 horas de fermentación lenta.",
+          "descripcionLarga": "Nuestra pieza de siempre. Corteza crujiente, miga abierta y brillante, y ese punto ácido suave que solo dan 48 horas de fermentación lenta. Aguanta tierno tres o cuatro días.",
+          "precio": 4.2,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, agua, masa madre (**centeno**), sal.",
+          "alergenos": [
+            "Gluten"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "hogaza-de-centeno",
+          "nombre": "Hogaza de centeno",
+          "descripcion": "Densa, aromática y con un punto ácido. Tierna toda la semana.",
+          "descripcionLarga": "Densa, aromática y con un punto ácido. Tierna toda la semana.",
+          "precio": 5.5,
+          "unidad": "unidad",
+          "etiqueta": "Novedad",
+          "ingredientes": "Harina de **centeno** integral, harina de **trigo**, agua, masa madre, sal, alcaravea.",
+          "alergenos": [
+            "Gluten"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        }
+      ]
+    },
+    {
+      "id": "palmeritas",
+      "nombre": "Palmeritas",
+      "productos": [
+        {
+          "id": "palmerita-clasica",
+          "nombre": "Palmerita clásica",
+          "descripcion": "Hojaldre de mantequilla caramelizado.",
+          "descripcionLarga": "Hojaldre de mantequilla caramelizado.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, azúcar, sal.",
+          "alergenos": [
+            "Gluten",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        }
+      ]
+    }
+  ],
+  "equipo": [
+    {
+      "id": "andres",
+      "nombre": "Andrés",
+      "puesto": "Maestro panadero",
+      "descripcion": "Lleva treinta años levantándose a las tres. Cuida la masa madre como si fuera suya, porque lo es.",
+      "foto": null
+    },
+    {
+      "id": "lucia",
+      "nombre": "Lucía",
+      "puesto": "Pastelera",
+      "descripcion": "Responsable del hojaldre y de que las palmeras salgan siempre doradas.",
+      "foto": null
+    }
+  ],
+  "resenas": {
+    "valoracion": 4.8,
+    "total": 312,
+    "urlEscribir": "https://search.google.com/local/writereview?placeid=EJEMPLO",
+    "urlTodas": "https://www.google.com/maps/search/Panader%C3%ADa+Rubic%C3%B3n",
+    "lista": [
+      {
+        "autor": "Marta G.",
+        "puntuacion": 5,
+        "texto": "El pan de masa madre aguanta tres días como recién hecho. Y siempre te atienden con una sonrisa.",
+        "publicadaEn": "2026-09-26T09:00:00Z"
+      },
+      {
+        "autor": "Javier R.",
+        "puntuacion": 4,
+        "texto": "El pan es de lo mejor que he probado en Madrid y las palmeritas son un vicio. Le quito una estrella porque los sábados por la mañana se forma bastante cola.",
+        "publicadaEn": "2026-09-08T09:00:00Z"
+      }
+    ]
+  },
+  "horario": {
+    "zonaHoraria": "Europe/Madrid",
+    "semana": {
+      "lunes": [],
+      "martes": [
+        {
+          "abre": "08:00",
+          "cierra": "14:30"
+        }
+      ],
+      "miercoles": [
+        {
+          "abre": "08:00",
+          "cierra": "14:30"
+        }
+      ],
+      "jueves": [
+        {
+          "abre": "08:00",
+          "cierra": "14:30"
+        }
+      ],
+      "viernes": [
+        {
+          "abre": "08:00",
+          "cierra": "14:30"
+        }
+      ],
+      "sabado": [
+        {
+          "abre": "08:00",
+          "cierra": "14:30"
+        }
+      ],
+      "domingo": []
+    },
+    "excepciones": [
+      {
+        "fecha": "2026-12-08",
+        "abierto": false,
+        "motivo": "Inmaculada Concepción"
+      },
+      {
+        "fecha": "2026-12-24",
+        "abierto": true,
+        "horario": [
+          {
+            "abre": "08:00",
+            "cierra": "13:00"
+          }
+        ],
+        "motivo": "Nochebuena"
+      },
+      {
+        "fecha": "2026-12-25",
+        "abierto": false,
+        "motivo": "Navidad"
+      },
+      {
+        "fecha": "2027-01-01",
+        "abierto": false,
+        "motivo": "Año Nuevo"
+      }
+    ]
+  },
+  "contacto": {
+    "direccion": "Calle San José, 12",
+    "localidad": "Fuenlabrada (Madrid)",
+    "telefono": {
+      "texto": "+34 634 18 77 47",
+      "enlace": "tel:+34634187747"
+    },
+    "whatsapp": {
+      "enlace": "https://wa.me/34634187747"
+    },
+    "email": "",
+    "redes": {},
+    "urlMapa": "https://www.google.com/maps?q=Calle%20San%20Jos%C3%A9%2012%2C%20Fuenlabrada&z=16&output=embed",
+    "urlComoLlegar": "https://www.google.com/maps/dir/?api=1&destination=Calle%20San%20Jos%C3%A9%2012%2C%20Fuenlabrada"
+  }
+}

@@ -1,0 +1,15 @@
+# Skills y configuración de agentes (no se suben)
+.claude/
+.agents/
+skills-lock.json
+Ander.md
+
+# Sistema
+.DS_Store
+
+# Dependencias y builds
+node_modules/
+dist/
+coverage/
+*.log
+.vite/

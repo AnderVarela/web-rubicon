@@ -1,0 +1,147 @@
+{
+  "$schema": "./datos.schema.json",
+  "version": 2,
+  "portada": {
+    "linea": "Horno de barrio · Fuenlabrada · desde 1987"
+  },
+  "aviso": {
+    "activo": false,
+    "texto": "Del 1 al 15 de agosto cerramos por vacaciones. ¡Nos vemos a la vuelta!",
+    "hasta": "2027-08-15"
+  },
+  "catalogo": {
+    "categorias": [
+      {
+        "id": "panes",
+        "nombre": "Panes",
+        "visible": true,
+        "productos": [
+          {
+            "id": "pan-de-masa-madre",
+            "nombre": "Pan de masa madre",
+            "descripcionCorta": "Corteza crujiente y miga abierta. 48 horas de fermentación lenta.",
+            "descripcionLarga": "Nuestra pieza de siempre. Corteza crujiente, miga abierta y brillante, y ese punto ácido suave que solo dan 48 horas de fermentación lenta. Aguanta tierno tres o cuatro días.",
+            "sinPrecio": false,
+            "precio": 4.2,
+            "unidad": "unidad",
+            "etiqueta": null,
+            "ingredientes": "Harina de **trigo**, agua, masa madre (**centeno**), sal.",
+            "alergenos": ["gluten"],
+            "foto": null,
+            "visible": true
+          },
+          {
+            "id": "hogaza-de-centeno",
+            "nombre": "Hogaza de centeno",
+            "descripcionCorta": "Densa, aromática y con un punto ácido. Tierna toda la semana.",
+            "descripcionLarga": "",
+            "sinPrecio": false,
+            "precio": 5.5,
+            "unidad": "unidad",
+            "etiqueta": "novedad",
+            "ingredientes": "Harina de **centeno** integral, harina de **trigo**, agua, masa madre, sal, alcaravea.",
+            "alergenos": ["gluten"],
+            "foto": null,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "id": "palmeritas",
+        "nombre": "Palmeritas",
+        "visible": true,
+        "productos": [
+          {
+            "id": "palmerita-clasica",
+            "nombre": "Palmerita clásica",
+            "descripcionCorta": "Hojaldre de mantequilla caramelizado.",
+            "descripcionLarga": "",
+            "sinPrecio": false,
+            "precio": 5.75,
+            "unidad": "cuarto_kg",
+            "etiqueta": null,
+            "ingredientes": "Hojaldre de **trigo** y **mantequilla**, azúcar, sal.",
+            "alergenos": ["gluten", "leche"],
+            "foto": null,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "id": "empanadas",
+        "nombre": "Empanadas",
+        "visible": true,
+        "productos": [
+          {
+            "id": "empanada-de-zamburinas",
+            "nombre": "Empanada de zamburiñas",
+            "descripcionCorta": "Solo cuando llegan buenas de la lonja.",
+            "descripcionLarga": "",
+            "sinPrecio": true,
+            "precio": null,
+            "unidad": "unidad",
+            "etiqueta": "temporada",
+            "ingredientes": "Harina de **trigo**, **zamburiñas**, cebolla, pimentón, aceite de oliva, **huevo**, sal.",
+            "alergenos": ["gluten", "moluscos", "huevos"],
+            "foto": null,
+            "visible": false
+          }
+        ]
+      },
+      { "id": "palmeras", "nombre": "Palmeras", "visible": true, "productos": [] },
+      { "id": "otros", "nombre": "Otros", "visible": true, "productos": [] }
+    ]
+  },
+  "horario": {
+    "zonaHoraria": "Europe/Madrid",
+    "semana": {
+      "lunes": [],
+      "martes": [{ "abre": "08:00", "cierra": "14:30" }],
+      "miercoles": [{ "abre": "08:00", "cierra": "14:30" }],
+      "jueves": [{ "abre": "08:00", "cierra": "14:30" }],
+      "viernes": [{ "abre": "08:00", "cierra": "14:30" }],
+      "sabado": [{ "abre": "08:00", "cierra": "14:30" }],
+      "domingo": []
+    },
+    "excepciones": [
+      { "fecha": "2026-12-08", "abierto": false, "motivo": "Inmaculada Concepción" },
+      { "fecha": "2026-12-24", "abierto": true, "horario": [{ "abre": "08:00", "cierra": "13:00" }], "motivo": "Nochebuena" },
+      { "fecha": "2026-12-25", "abierto": false, "motivo": "Navidad" },
+      { "fecha": "2027-01-01", "abierto": false, "motivo": "Año Nuevo" }
+    ]
+  },
+  "equipo": [
+    {
+      "id": "andres",
+      "nombre": "Andrés",
+      "puesto": "Maestro panadero",
+      "descripcion": "Lleva treinta años levantándose a las tres. Cuida la masa madre como si fuera suya, porque lo es.",
+      "foto": null
+    },
+    {
+      "id": "lucia",
+      "nombre": "Lucía",
+      "puesto": "Pastelera",
+      "descripcion": "Responsable del hojaldre y de que las palmeras salgan siempre doradas.",
+      "foto": null
+    }
+  ],
+  "resenas": {
+    "valoracion": null,
+    "total": 0,
+    "sincronizadasEn": null,
+    "lista": []
+  },
+  "contacto": {
+    "direccion": "Calle San José, 12",
+    "localidad": "Fuenlabrada (Madrid)",
+    "telefono": "+34 634 18 77 47",
+    "whatsapp": "+34 634 18 77 47",
+    "email": "",
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "googlePlaceId": "",
+    "googleMapsUrl": ""
+  }
+}
