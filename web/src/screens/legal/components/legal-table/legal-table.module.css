@@ -1,0 +1,29 @@
+.legalTable {
+  overflow-x: auto;
+  margin: var(--space-2) 0 var(--space-4);
+  border-top: 1px solid var(--color-line-strong);
+}
+
+.table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: var(--font-size-body-ms);
+  line-height: var(--line-height-base);
+}
+
+.head {
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line-control);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cell {
+  padding: var(--space-3) var(--space-3) var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line);
+  vertical-align: top;
+}

@@ -1,0 +1,15 @@
+.legalHeader {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: var(--size-header);
+}
+
+.logo {
+  width: 110px;
+}

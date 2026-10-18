@@ -1,0 +1,31 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  padding-top: clamp(48px, 7vw, 96px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+.article {
+  max-width: 68ch;
+  min-width: 0;
+}
+
+.article:focus {
+  outline: none;
+}
+
+.title {
+  margin-top: var(--space-4);
+}
+
+.updated {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+}
