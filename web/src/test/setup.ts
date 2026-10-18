@@ -43,5 +43,5 @@ if (!('IntersectionObserver' in window)) {
       return [];
     }
   }
-  Object.defineProperty(window, 'IntersectionObserver', { value: IntersectionObserverStub, writable: true });
+  Object.defineProperty(window, 'IntersectionObserver', { value: IntersectionObserverStub, writable: true, configurable: true });
 }
