@@ -1,0 +1,59 @@
+.heroSeal {
+  position: absolute;
+  left: clamp(16px, 2vw, 28px);
+  bottom: clamp(16px, 2vw, 28px);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: clamp(104px, 9.5vw, 136px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-background-base);
+  color: var(--color-text-primary);
+  pointer-events: none;
+  animation: seal-in 0.9s var(--ease-spring) 1s backwards;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: rb-spin 60s linear infinite;
+}
+
+.circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.6;
+  opacity: 0.45;
+}
+
+.text {
+  fill: currentColor;
+  font-family: var(--font-family-base);
+  font-size: 8.6px;
+  font-weight: var(--font-weight-medium);
+}
+
+.symbol {
+  width: 32%;
+}
+
+@keyframes seal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-40deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroSeal,
+  .ring {
+    animation: none;
+  }
+}

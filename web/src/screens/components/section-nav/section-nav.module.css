@@ -1,0 +1,140 @@
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  transition-property: transform, color, background-color;
+  transition-duration: var(--duration-base);
+}
+
+/* Cabecera de escritorio */
+.header .list {
+  gap: var(--space-1);
+}
+
+.header .link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--size-touch);
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-body-ms);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+}
+
+.header .current {
+  font-weight: var(--font-weight-semibold);
+}
+
+.bar {
+  position: absolute;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: 6px;
+  height: 1px;
+  background: var(--color-line-strong);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-out-soft);
+}
+
+.header .link:hover .bar,
+.header .current .bar {
+  transform: scaleX(1);
+}
+
+/* Pie */
+.footer .list {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer .link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  font-size: var(--font-size-body-ms);
+  line-height: var(--line-height-base);
+  color: var(--color-text-inverse);
+  outline-color: var(--color-focus-ring-inverse);
+}
+
+.footer .link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Menú móvil */
+.menu {
+  flex: 1;
+  padding: var(--space-4) var(--space-5) 0;
+}
+
+.menu .list {
+  flex-direction: column;
+}
+
+.menu .link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 76px;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line-inverse);
+  color: var(--color-text-inverse);
+  outline-color: var(--color-focus-ring-inverse);
+  animation: rb-rise 0.65s var(--ease-out-soft) backwards;
+}
+
+.menu li:nth-child(1) .link {
+  animation-delay: 80ms;
+}
+
+.menu li:nth-child(2) .link {
+  animation-delay: 140ms;
+}
+
+.menu li:nth-child(3) .link {
+  animation-delay: 200ms;
+}
+
+.menu li:nth-child(4) .link {
+  animation-delay: 260ms;
+}
+
+.number {
+  width: 22px;
+  font-size: var(--font-size-eyebrow);
+  color: var(--color-text-inverse-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.menu .label {
+  flex: 1;
+  font-family: var(--font-family-display);
+  font-size: clamp(36px, 10vw, 44px);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.menu .current .label {
+  font-style: italic;
+}
+
+.here {
+  font-size: var(--font-size-eyebrow);
+  color: var(--color-text-inverse-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu .link {
+    animation: none;
+  }
+}

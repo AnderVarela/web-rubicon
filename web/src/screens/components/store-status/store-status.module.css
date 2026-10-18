@@ -1,0 +1,44 @@
+.storeStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-body-ms);
+  line-height: 1.4;
+}
+
+.state {
+  font-weight: var(--font-weight-semibold);
+}
+
+.short {
+  font-weight: var(--font-weight-regular);
+}
+
+.pill {
+  min-height: 36px;
+  padding: 6px 14px 6px 12px;
+  background: var(--color-background-subtle);
+  font-size: var(--font-size-body-s);
+}
+
+.short.storeStatus,
+.storeStatus.short {
+  gap: var(--space-2);
+  font-size: var(--font-size-caption);
+  white-space: nowrap;
+}
+
+.primary {
+  color: var(--color-text-primary);
+}
+
+.inverse {
+  gap: var(--space-2);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-caption);
+  white-space: nowrap;
+}
+
+.inverse .state {
+  font-weight: var(--font-weight-regular);
+}

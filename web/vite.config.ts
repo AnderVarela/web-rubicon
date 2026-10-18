@@ -24,7 +24,7 @@ export default defineConfig({
     fs: { allow: [path.resolve(import.meta.dirname, '..')] },
   },
   css: {
-    modules: { localsConvention: 'camelCaseOnly' },
+    modules: { localsConvention: 'camelCase' },
   },
   test: {
     globals: true,

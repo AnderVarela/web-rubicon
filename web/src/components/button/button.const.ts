@@ -1,6 +1,7 @@
 export enum ButtonVariant {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
+  OUTLINE = 'outline',
   INVERSE = 'inverse',
   PLAIN = 'plain',
   LINK = 'link',
