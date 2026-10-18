@@ -1,0 +1,43 @@
+.home {
+  --hero-offset-desktop: var(--size-header);
+  --section-scroll-offset: 0px;
+
+  min-height: 100vh;
+  padding-bottom: var(--size-dock);
+  background: var(--color-background-base);
+}
+
+.top {
+  position: relative;
+  z-index: var(--z-header);
+}
+
+.main {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+.main:focus {
+  outline: none;
+}
+
+@media (min-width: 1024px) {
+  .home {
+    --section-scroll-offset: var(--size-header);
+
+    padding-bottom: 0;
+  }
+
+  .withNotice {
+    --hero-offset-desktop: calc(var(--size-header) + var(--size-notice));
+    --section-scroll-offset: calc(var(--size-header) + var(--size-notice));
+  }
+
+  .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
