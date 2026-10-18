@@ -1,0 +1,11 @@
+.legalSection {
+  margin-top: var(--space-12);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.paragraph {
+  margin-bottom: var(--space-4);
+}

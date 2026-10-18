@@ -1,0 +1,65 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) var(--page-gutter);
+}
+
+.home {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: var(--size-touch);
+  color: var(--color-text-primary);
+}
+
+.logo {
+  width: 120px;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 5vw, 64px);
+  padding-top: var(--space-12);
+  text-align: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: var(--space-5);
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1;
+}
+
+.text {
+  max-width: 40ch;
+  margin-top: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.back {
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding: 0 var(--space-5);
+}
+
+.illustration {
+  display: block;
+  width: min(100%, 720px);
+  aspect-ratio: 523 / 174;
+  background: var(--color-ink);
+  mask: url('@/assets/illustrations/cenefa.png') center bottom / contain no-repeat;
+  -webkit-mask: url('@/assets/illustrations/cenefa.png') center bottom / contain no-repeat;
+}

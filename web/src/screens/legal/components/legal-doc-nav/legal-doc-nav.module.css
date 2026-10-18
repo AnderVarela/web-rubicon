@@ -1,0 +1,53 @@
+.legalDocNav {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.list {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  flex: none;
+  display: flex;
+  align-items: center;
+  min-height: var(--size-touch);
+  padding: 0 14px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-s);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--duration-base);
+}
+
+.link:hover {
+  background: var(--color-background-subtle);
+}
+
+.active {
+  background: var(--color-background-subtle);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (min-width: 1024px) {
+  .legalDocNav {
+    position: sticky;
+    top: var(--space-8);
+  }
+
+  .list {
+    flex-direction: column;
+  }
+
+  .link {
+    border-left: 2px solid transparent;
+  }
+
+  .active {
+    border-left-color: var(--color-line-strong);
+  }
+}
