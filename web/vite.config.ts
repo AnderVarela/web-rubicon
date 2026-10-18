@@ -3,6 +3,7 @@ import { copyFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { imagetools } from 'vite-imagetools';
 import { LEGAL_DOCUMENTS } from './src/screens/components/legal-nav/legal-nav.const';
 
 const src = (dir = '') => path.resolve(import.meta.dirname, 'src', dir);
@@ -25,7 +26,7 @@ const staticPages = (): Plugin => ({
 });
 
 export default defineConfig({
-  plugins: [react(), staticPages()],
+  plugins: [react(), imagetools(), staticPages()],
   resolve: {
     alias: {
       '@components': src('components'),
