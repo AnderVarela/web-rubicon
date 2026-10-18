@@ -15,7 +15,7 @@
 }
 
 .pulse {
-  animation: rb-pulse 2.4s ease-out infinite;
+  animation: var(--animation-pulse) 2.4s ease-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,7 +3,7 @@
   width: var(--skeleton-width, 100%);
   height: var(--skeleton-height, 12px);
   background-size: 300% 100%;
-  animation: rb-shimmer 1.6s ease-in-out infinite;
+  animation: var(--animation-shimmer) 1.6s ease-in-out infinite;
 }
 
 .fill {
