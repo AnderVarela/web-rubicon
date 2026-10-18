@@ -40,6 +40,69 @@
           ],
           "foto": null,
           "fotoFicha": null
+        },
+        {
+          "id": "barra-rustica",
+          "nombre": "Barra rústica",
+          "descripcion": "La de cada día: alveolada, ligera y de corteza fina.",
+          "descripcionLarga": "La de cada día: alveolada, ligera y de corteza fina.",
+          "precio": 1.6,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, agua, masa madre, sal, levadura.",
+          "alergenos": [
+            "Gluten"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "pan-de-espelta-y-semillas",
+          "nombre": "Pan de espelta y semillas",
+          "descripcion": "Espelta integral con pipas de girasol, lino y sésamo.",
+          "descripcionLarga": "Espelta integral con pipas de girasol, lino y sésamo.",
+          "precio": 4.8,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **espelta** integral, agua, semillas de girasol, lino y **sésamo**, masa madre, sal.",
+          "alergenos": [
+            "Gluten",
+            "Sésamo"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chapata-de-aceite",
+          "nombre": "Chapata de aceite",
+          "descripcion": "Masa muy hidratada con aceite de oliva virgen extra.",
+          "descripcionLarga": "Masa muy hidratada con aceite de oliva virgen extra.",
+          "precio": 2.4,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, agua, aceite de oliva virgen extra, masa madre, sal.",
+          "alergenos": [
+            "Gluten"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "pan-de-molde-de-mantequilla",
+          "nombre": "Pan de molde de mantequilla",
+          "descripcion": "Tierno, para tostar o para el bocadillo del recreo.",
+          "descripcionLarga": "Tierno, para tostar o para el bocadillo del recreo.",
+          "precio": 4.5,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **leche**, **mantequilla**, **huevo**, azúcar, sal, levadura.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
         }
       ]
     },
@@ -62,6 +125,708 @@
           ],
           "foto": null,
           "fotoFicha": null
+        },
+        {
+          "id": "palmerita-de-chocolate",
+          "nombre": "Palmerita de chocolate",
+          "descripcion": "Bañada entera en chocolate negro.",
+          "descripcionLarga": "Bañada entera en chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-negro-con-hilos",
+          "nombre": "Chocolate negro con hilos",
+          "descripcion": "Chocolate negro brillante con hilos de chocolate con leche.",
+          "descripcionLarga": "Chocolate negro brillante con hilos de chocolate con leche.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), **leche**.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-negro-y-blanco",
+          "nombre": "Chocolate negro y blanco",
+          "descripcion": "Chocolate negro con dos hilos de chocolate blanco.",
+          "descripcionLarga": "Chocolate negro con dos hilos de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), chocolate blanco.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-con-leche",
+          "nombre": "Chocolate con leche",
+          "descripcion": "Chocolate con leche con hilos de chocolate negro.",
+          "descripcionLarga": "Chocolate con leche con hilos de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate con **leche** (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-con-pepitas",
+          "nombre": "Chocolate con pepitas",
+          "descripcion": "Chocolate con pepitas de chocolate por encima.",
+          "descripcionLarga": "Chocolate con pepitas de chocolate por encima.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-blanco",
+          "nombre": "Chocolate blanco",
+          "descripcion": "Chocolate blanco con hilos de chocolate negro.",
+          "descripcionLarga": "Chocolate blanco con hilos de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate blanco, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-crujiente",
+          "nombre": "Chocolate crujiente",
+          "descripcion": "Relleno crujiente de chocolate bajo una rejilla de chocolate negro.",
+          "descripcionLarga": "Relleno crujiente de chocolate bajo una rejilla de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), barquillo.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-y-barquillo",
+          "nombre": "Chocolate y barquillo",
+          "descripcion": "Rebozada en chocolate con trocitos de barquillo.",
+          "descripcionLarga": "Rebozada en chocolate con trocitos de barquillo.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), barquillo de **trigo**.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-blanco-y-cereal",
+          "nombre": "Chocolate blanco y cereal",
+          "descripcion": "Chocolate blanco con arroz inflado de cacao.",
+          "descripcionLarga": "Chocolate blanco con arroz inflado de cacao.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate blanco, arroz inflado, cacao, lecitina de **soja**.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "galleta-de-cacao",
+          "nombre": "Galleta de cacao",
+          "descripcion": "Cubierta de galleta de cacao y crema triturada.",
+          "descripcionLarga": "Cubierta de galleta de cacao y crema triturada.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, galleta de cacao, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "galleta-caramelizada",
+          "nombre": "Galleta caramelizada",
+          "descripcion": "Crema y galleta caramelizada triturada.",
+          "descripcionLarga": "Crema y galleta caramelizada triturada.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, galleta caramelizada, crema de galleta.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "dulce-de-leche",
+          "nombre": "Dulce de leche",
+          "descripcion": "Dulce de leche con rejilla de chocolate negro.",
+          "descripcionLarga": "Dulce de leche con rejilla de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, dulce de **leche**, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "toffee",
+          "nombre": "Toffee",
+          "descripcion": "Crema de toffee con rejilla de chocolate negro.",
+          "descripcionLarga": "Crema de toffee con rejilla de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, crema de toffee, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "fresa-y-chocolate",
+          "nombre": "Fresa y chocolate",
+          "descripcion": "Mermelada de fresa con rejilla de chocolate negro.",
+          "descripcionLarga": "Mermelada de fresa con rejilla de chocolate negro.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, mermelada de fresa, chocolate (cacao, azúcar, lecitina de **soja**).",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-blanco-y-fresa",
+          "nombre": "Chocolate blanco y fresa",
+          "descripcion": "Fresa y virutas de chocolate blanco.",
+          "descripcionLarga": "Fresa y virutas de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate blanco, mermelada de fresa.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-blanco-y-frambuesa",
+          "nombre": "Chocolate blanco y frambuesa",
+          "descripcion": "Crema de frambuesa con hilos de chocolate blanco.",
+          "descripcionLarga": "Crema de frambuesa con hilos de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate blanco, crema de frambuesa.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "rosa",
+          "nombre": "Rosa",
+          "descripcion": "Cobertura rosa con corazones de azúcar.",
+          "descripcionLarga": "Cobertura rosa con corazones de azúcar.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, cobertura de chocolate blanco con colorante, azúcar.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "violeta",
+          "nombre": "Violeta",
+          "descripcion": "Cobertura de color violeta con trocitos crujientes.",
+          "descripcionLarga": "Cobertura de color violeta con trocitos crujientes.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, cobertura de chocolate blanco, colorante.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "limon",
+          "nombre": "Limón",
+          "descripcion": "Cobertura de limón con hilos de chocolate blanco.",
+          "descripcionLarga": "Cobertura de limón con hilos de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, cobertura de limón, chocolate blanco.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "crema-tostada",
+          "nombre": "Crema tostada",
+          "descripcion": "Crema pastelera tostada con hilos de chocolate blanco.",
+          "descripcionLarga": "Crema pastelera tostada con hilos de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, crema pastelera (**leche**, **huevo**), azúcar.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "crema-y-almendra",
+          "nombre": "Crema y almendra",
+          "descripcion": "Crema pastelera, almendra laminada y azúcar glas.",
+          "descripcionLarga": "Crema pastelera, almendra laminada y azúcar glas.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, crema pastelera (**leche**, **huevo**), **almendra**.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche",
+            "Frutos de cáscara"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-blanco-y-coco",
+          "nombre": "Chocolate blanco y coco",
+          "descripcion": "Chocolate blanco con coco y rejilla blanca.",
+          "descripcionLarga": "Chocolate blanco con coco y rejilla blanca.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate blanco, coco.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "pistacho",
+          "nombre": "Pistacho",
+          "descripcion": "Rebozada en pistacho troceado.",
+          "descripcionLarga": "Rebozada en pistacho troceado.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, crema y **pistacho**.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche",
+            "Frutos de cáscara"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "chocolate-y-avellana",
+          "nombre": "Chocolate y avellana",
+          "descripcion": "Chocolate con trocitos de avellana.",
+          "descripcionLarga": "Chocolate con trocitos de avellana.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), **avellana**.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche",
+            "Frutos de cáscara"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "cacahuete",
+          "nombre": "Cacahuete",
+          "descripcion": "Cobertura de cacahuete con cacahuete troceado.",
+          "descripcionLarga": "Cobertura de cacahuete con cacahuete troceado.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, crema de **cacahuete**, chocolate blanco.",
+          "alergenos": [
+            "Gluten",
+            "Cacahuetes",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "palmerita-b",
+          "nombre": "Palmerita B",
+          "descripcion": "Chocolate negro con una B de chocolate blanco.",
+          "descripcionLarga": "Chocolate negro con una B de chocolate blanco.",
+          "precio": 5.75,
+          "unidad": "¼ kg",
+          "etiqueta": null,
+          "ingredientes": "Hojaldre de **trigo** y **mantequilla**, chocolate (cacao, azúcar, lecitina de **soja**), chocolate blanco.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        }
+      ]
+    },
+    {
+      "id": "empanadas",
+      "nombre": "Empanadas",
+      "productos": [
+        {
+          "id": "empanada-de-atun",
+          "nombre": "Empanada de atún",
+          "descripcion": "Masa de pan, bonito, pimiento asado y cebolla pochada.",
+          "descripcionLarga": "Masa de pan, bonito, pimiento asado y cebolla pochada.",
+          "precio": 18.0,
+          "unidad": "unidad",
+          "etiqueta": "Solo fines de semana",
+          "ingredientes": "Harina de **trigo**, **bonito** del norte, pimiento rojo, cebolla, tomate, aceite de oliva, **huevo**, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Pescado"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "empanada-de-carne",
+          "nombre": "Empanada de carne",
+          "descripcion": "Ternera guisada a fuego lento con pimentón de la Vera.",
+          "descripcionLarga": "Ternera guisada a fuego lento con pimentón de la Vera.",
+          "precio": 18.0,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, ternera, cebolla, pimiento, pimentón, **vino** blanco, **huevo**, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Sulfitos"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "empanada-de-bacalao-y-pasas",
+          "nombre": "Empanada de bacalao y pasas",
+          "descripcion": "La receta de la abuela de Andrés, con bacalao desalado.",
+          "descripcionLarga": "La receta de la abuela de Andrés, con bacalao desalado.",
+          "precio": 20.0,
+          "unidad": "unidad",
+          "etiqueta": "Solo fines de semana",
+          "ingredientes": "Harina de **trigo**, **bacalao**, cebolla, pasas, aceite de oliva, **huevo**, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Pescado",
+            "Sulfitos"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "empanadilla-de-pisto",
+          "nombre": "Empanadilla de pisto",
+          "descripcion": "Individual, con pisto casero de verduras de temporada.",
+          "descripcionLarga": "Individual, con pisto casero de verduras de temporada.",
+          "precio": 2.8,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, calabacín, pimiento, tomate, cebolla, **apio**, aceite de oliva, sal.",
+          "alergenos": [
+            "Gluten",
+            "Apio"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "empanada-de-zamburinas",
+          "nombre": "Empanada de zamburiñas",
+          "descripcion": "Solo cuando llegan buenas de la lonja.",
+          "descripcionLarga": "Solo cuando llegan buenas de la lonja.",
+          "precio": null,
+          "unidad": "unidad",
+          "etiqueta": "De temporada",
+          "ingredientes": "Harina de **trigo**, **zamburiñas**, cebolla, pimentón, aceite de oliva, **huevo**, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Moluscos"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        }
+      ]
+    },
+    {
+      "id": "palmeras",
+      "nombre": "Palmeras",
+      "productos": [
+        {
+          "id": "palmera-de-chocolate",
+          "nombre": "Palmera de chocolate",
+          "descripcion": "Hojaldre crujiente bañado en chocolate con leche.",
+          "descripcionLarga": "Hojaldre crujiente bañado en chocolate con leche.",
+          "precio": 2.2,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **mantequilla**, chocolate con **leche** (cacao, azúcar, lecitina de **soja**), sal.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "palmera-de-chocolate-negro",
+          "nombre": "Palmera de chocolate negro",
+          "descripcion": "Para quien quiere menos dulce y más cacao.",
+          "descripcionLarga": "Para quien quiere menos dulce y más cacao.",
+          "precio": 2.4,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **mantequilla**, chocolate negro 70 % (cacao, azúcar, lecitina de **soja**), sal.",
+          "alergenos": [
+            "Gluten",
+            "Soja",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "palmera-glaseada",
+          "nombre": "Palmera glaseada",
+          "descripcion": "Glaseado fino de azúcar con un toque de limón.",
+          "descripcionLarga": "Glaseado fino de azúcar con un toque de limón.",
+          "precio": 1.9,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **mantequilla**, azúcar glas, clara de **huevo**, limón, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "palmera-de-almendra",
+          "nombre": "Palmera de almendra",
+          "descripcion": "Con almendra laminada tostada y almíbar ligero.",
+          "descripcionLarga": "Con almendra laminada tostada y almíbar ligero.",
+          "precio": 2.6,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **mantequilla**, **almendra**, azúcar, sal.",
+          "alergenos": [
+            "Gluten",
+            "Leche",
+            "Frutos de cáscara"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        }
+      ]
+    },
+    {
+      "id": "otros",
+      "nombre": "Otros",
+      "productos": [
+        {
+          "id": "roscon-de-reyes",
+          "nombre": "Roscón de Reyes",
+          "descripcion": "Masa de azahar, fruta escarchada y almendra. Con o sin nata.",
+          "descripcionLarga": "Masa de azahar, fruta escarchada y almendra. Con o sin nata.",
+          "precio": 22.0,
+          "unidad": "unidad",
+          "etiqueta": "De temporada",
+          "ingredientes": "Harina de **trigo**, **huevo**, **mantequilla**, **leche**, azúcar, agua de azahar, naranja escarchada, **almendra**, sal.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche",
+            "Frutos de cáscara"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "croissant-de-mantequilla",
+          "nombre": "Croissant de mantequilla",
+          "descripcion": "Laminado a mano, tres días de proceso.",
+          "descripcionLarga": "Laminado a mano, tres días de proceso.",
+          "precio": 1.8,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **mantequilla**, **leche**, azúcar, **huevo**, sal, levadura.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "magdalenas-de-aceite",
+          "nombre": "Magdalenas de aceite",
+          "descripcion": "Altas, esponjosas y con su copete de azúcar.",
+          "descripcionLarga": "Altas, esponjosas y con su copete de azúcar.",
+          "precio": 6.0,
+          "unidad": "docena",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **huevo**, azúcar, aceite de girasol, **leche**, limón.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "bizcocho-de-yogur-y-limon",
+          "nombre": "Bizcocho de yogur y limón",
+          "descripcion": "El de merendar. Entero, para compartir.",
+          "descripcionLarga": "El de merendar. Entero, para compartir.",
+          "precio": 9.5,
+          "unidad": "unidad",
+          "etiqueta": null,
+          "ingredientes": "Harina de **trigo**, **huevo**, **yogur**, azúcar, aceite, limón, gasificante.",
+          "alergenos": [
+            "Gluten",
+            "Huevos",
+            "Leche"
+          ],
+          "foto": null,
+          "fotoFicha": null
+        },
+        {
+          "id": "rosquillas-de-anis",
+          "nombre": "Rosquillas de anís",
+          "descripcion": "Fritas en aceite de oliva, como en las fiestas.",
+          "descripcionLarga": "Fritas en aceite de oliva, como en las fiestas.",
+          "precio": 10.0,
+          "unidad": "kg",
+          "etiqueta": "Solo fines de semana",
+          "ingredientes": "Harina de **trigo**, **huevo**, azúcar, aceite de oliva, anís, ralladura de limón.",
+          "alergenos": [
+            "Gluten",
+            "Huevos"
+          ],
+          "foto": null,
+          "fotoFicha": null
         }
       ]
     }
@@ -80,6 +845,41 @@
       "puesto": "Pastelera",
       "descripcion": "Responsable del hojaldre y de que las palmeras salgan siempre doradas.",
       "foto": null
+    },
+    {
+      "id": "carmen",
+      "nombre": "Carmen",
+      "puesto": "Encargada de tienda",
+      "descripcion": "Se sabe el pan de cada vecino y te lo aparta si llegas tarde.",
+      "foto": null
+    },
+    {
+      "id": "tomas",
+      "nombre": "Tomás",
+      "puesto": "Hornero",
+      "descripcion": "Controla el horno de leña al grado. Si hay corteza perfecta, es cosa suya.",
+      "foto": null
+    },
+    {
+      "id": "nerea",
+      "nombre": "Nerea",
+      "puesto": "Dependienta",
+      "descripcion": "Las mañanas son suyas: café, sonrisa y la barra todavía caliente.",
+      "foto": null
+    },
+    {
+      "id": "inigo",
+      "nombre": "Íñigo",
+      "puesto": "Aprendiz",
+      "descripcion": "Llegó de prácticas y se quedó. Ya forma las hogazas solo.",
+      "foto": null
+    },
+    {
+      "id": "rafa",
+      "nombre": "Rafa",
+      "puesto": "Repartidor",
+      "descripcion": "Lleva el pan a los bares del barrio antes de que abran.",
+      "foto": null
     }
   ],
   "resenas": {
@@ -92,13 +892,31 @@
         "autor": "Marta G.",
         "puntuacion": 5,
         "texto": "El pan de masa madre aguanta tres días como recién hecho. Y siempre te atienden con una sonrisa.",
-        "publicadaEn": "2026-09-26T09:00:00Z"
+        "publicadaEn": "2026-10-04T09:00:00Z"
       },
       {
         "autor": "Javier R.",
         "puntuacion": 4,
-        "texto": "El pan es de lo mejor que he probado en Madrid y las palmeritas son un vicio. Le quito una estrella porque los sábados por la mañana se forma bastante cola.",
-        "publicadaEn": "2026-09-08T09:00:00Z"
+        "texto": "El pan es de lo mejor que he probado en Madrid y las palmeritas son un vicio. Le quito una estrella porque los sábados por la mañana se forma bastante cola y a veces la hogaza de centeno se acaba antes de las doce. Mi consejo: ve pronto o pide que te la guarden llamando el día antes. Aun así, volveré cada semana.",
+        "publicadaEn": "2026-09-18T09:00:00Z"
+      },
+      {
+        "autor": "Lola P.",
+        "puntuacion": 5,
+        "texto": "Las palmeritas de hojaldre son las de mi infancia. Compro un cuarto de kilo cada domingo y no llegan a casa.",
+        "publicadaEn": "2026-07-18T09:00:00Z"
+      },
+      {
+        "autor": "Sergio M.",
+        "puntuacion": 5,
+        "texto": "Encargamos una empanada de atún para una comida familiar y fue lo primero que se acabó. Masa fina, relleno jugoso y nada de aceite de más. Nos explicaron cómo calentarla para que quedara crujiente y acertaron de lleno. Ya es tradición en casa.",
+        "publicadaEn": "2026-05-18T09:00:00Z"
+      },
+      {
+        "autor": "Ana B.",
+        "puntuacion": 5,
+        "texto": "Panadería de barrio de las de verdad. El croissant, espectacular.",
+        "publicadaEn": "2026-02-18T09:00:00Z"
       }
     ]
   },
@@ -177,8 +995,12 @@
     "whatsapp": {
       "enlace": "https://wa.me/34634187747"
     },
-    "email": "",
-    "redes": {},
+    "email": "contacto@panaderiarubicon.es",
+    "redes": {
+      "instagram": "https://instagram.com/panaderiarubicon",
+      "facebook": "https://facebook.com/panaderiarubicon",
+      "tiktok": "https://tiktok.com/@panaderiarubicon"
+    },
     "urlMapa": "https://www.google.com/maps?q=Calle%20San%20Jos%C3%A9%2012%2C%20Fuenlabrada&z=16&output=embed",
     "urlComoLlegar": "https://www.google.com/maps/dir/?api=1&destination=Calle%20San%20Jos%C3%A9%2012%2C%20Fuenlabrada"
   }
