@@ -4,7 +4,7 @@ import { Eyebrow } from '@components/eyebrow';
 import { IconName } from '@components/icon';
 import { Logo, LogoVariant } from '@components/logo';
 import { Photo, PhotoRatio, PhotoTone } from '@components/photo';
-import { Section } from '@components/section';
+import { Section, SectionTone } from '@components/section';
 import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@components/text';
 import heroPhoto from '@/assets/photos/hero-hogaza.jpg';
 import { CONTENT } from '@/content';
@@ -19,7 +19,7 @@ export const Hero = () => {
   const { portada, contacto } = CONTENT;
 
   return (
-    <Section id={SectionId.HOME} labelledBy={HERO_TITLE_ID} className={styles.hero} containerClassName={styles.grid}>
+    <Section id={SectionId.HOME} labelledBy={HERO_TITLE_ID} tone={SectionTone.TRANSPARENT} className={styles.hero} containerClassName={styles.grid}>
       <div className={styles.copy}>
         <span aria-hidden="true" className={styles.halo} />
         <Eyebrow className={styles.eyebrow}>{portada.linea}</Eyebrow>

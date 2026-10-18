@@ -1,6 +1,5 @@
 .catalog {
   padding: clamp(64px, 7vw, 96px) 0 clamp(56px, 7vw, 96px);
-  background: transparent;
 }
 
 .decoration {
