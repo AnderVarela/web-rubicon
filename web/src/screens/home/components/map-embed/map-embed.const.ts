@@ -4,5 +4,16 @@ export const MAP_EMBED_MESSAGES = {
   open: 'map.open',
   title: 'map.title',
   loaded: 'map.loaded',
+  failed: 'map.failed',
+  retry: 'map.retry',
   caption: 'map.caption',
 } as const;
+
+// Si Google no responde en este tiempo, se avisa y se ofrece abrir el mapa fuera.
+export const MAP_LOAD_TIMEOUT_MS = 10_000;
+
+export enum MapStatus {
+  LOADING = 'loading',
+  LOADED = 'loaded',
+  FAILED = 'failed',
+}

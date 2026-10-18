@@ -67,8 +67,11 @@
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
 
+  /* Mapa fijo y centrado en la parte visible de la pantalla (debajo de la cabecera), como en el diseño. */
   .map {
+    --map-height: min(calc(100vh - var(--section-scroll-offset, 0px) - 112px), 760px);
+
     position: sticky;
-    top: calc(var(--section-scroll-offset, 0px) + var(--space-6));
+    top: calc(var(--section-scroll-offset, 0px) + (100vh - var(--section-scroll-offset, 0px) - var(--map-height) - 30px) / 2);
   }
 }
