@@ -1,6 +1,6 @@
 import type { IntlShape } from 'react-intl';
-import type { DiaSemana, Excepcion, Franja, Semana } from '@/content';
-import { WEEK_DAYS, formatTime } from '@hooks/use-store-status';
+import type { DiaSemana, Franja, Horario, Semana } from '@/content';
+import { WEEK_DAYS, addDays, formatTime, getRangesFor, type ZonedNow } from '@hooks/use-store-status';
 import { DAY_MESSAGE_PREFIX, OPENING_HOURS_MESSAGES, RANGE_SEPARATOR } from './opening-hours.const';
 
 type Format = IntlShape['formatMessage'];
@@ -59,12 +59,19 @@ export const formatGroupLine = (group: DayGroup, formatMessage: Format) =>
     ),
   );
 
-export const formatException = (exception: Excepcion, intl: IntlShape) => {
-  const date = intl.formatDate(`${exception.fecha}T12:00:00Z`, { day: 'numeric', month: 'long', timeZone: 'UTC' });
-  return exception.abierto && exception.horario
-    ? intl.formatMessage(
-        { id: OPENING_HOURS_MESSAGES.exceptionOpen },
-        { date, reason: exception.motivo, hours: formatRanges(exception.horario, intl.formatMessage) },
-      )
-    : intl.formatMessage({ id: OPENING_HOURS_MESSAGES.exceptionClosed }, { date, reason: exception.motivo });
+export interface WeekDay {
+  day: DiaSemana;
+  ranges: Franja[];
+  isToday: boolean;
+}
+
+// Semana actual (de lunes a domingo) con las excepciones ya aplicadas a cada fecha:
+// horario especial si abre distinto, ninguno si cierra y el de la semana si es un día normal.
+export const getCurrentWeek = (horario: Horario, now: ZonedNow): WeekDay[] => {
+  const monday = addDays(now.isoDate, -now.dayIndex);
+  return WEEK_DAYS.map((day, index) => ({
+    day,
+    ranges: getRangesFor(horario, addDays(monday, index), index),
+    isToday: index === now.dayIndex,
+  }));
 };
