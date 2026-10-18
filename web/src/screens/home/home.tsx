@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { SkipLink } from '@components/skip-link';
 import { CONTENT } from '@/content';
 import { useNow } from '@hooks/use-now';
 import { getZonedNow } from '@hooks/use-store-status';
+import { Catalog } from '@screens/home/components/catalog';
 import { Hero } from '@screens/home/components/hero';
 import { MobileDock } from '@screens/home/components/mobile-dock';
 import { MobileMenu } from '@screens/home/components/mobile-menu';
@@ -12,7 +13,7 @@ import { SiteHeader } from '@screens/home/components/site-header';
 import { useActiveSection } from '@screens/home/hooks/use-active-section';
 import styles from './home.module.css';
 import { HOME_MESSAGES, MAIN_CONTENT_ID } from './home.const';
-import { isNoticeActive } from './home.helper';
+import { isNoticeActive, scrollToLocationHash } from './home.helper';
 
 export const Home = () => {
   const { formatMessage } = useIntl();
@@ -21,6 +22,10 @@ export const Home = () => {
   const [noticeClosed, setNoticeClosed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { aviso, horario } = CONTENT;
+  useEffect(() => {
+    scrollToLocationHash(document, window.location.hash);
+  }, []);
+
   const showNotice = isNoticeActive(aviso, getZonedNow(now, horario.zonaHoraria).isoDate) && !noticeClosed;
 
   return (
@@ -32,6 +37,7 @@ export const Home = () => {
       </div>
       <main id={MAIN_CONTENT_ID} tabIndex={-1} className={styles.main}>
         <Hero />
+        <Catalog />
       </main>
       <MobileDock activeId={activeId} menuOpen={menuOpen} onOpenMenu={() => setMenuOpen(true)} />
       <MobileMenu open={menuOpen} activeId={activeId} onClose={() => setMenuOpen(false)} />

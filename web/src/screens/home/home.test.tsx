@@ -29,6 +29,17 @@ describe('Home', () => {
     expect(menuButton).toHaveFocus();
   });
 
+  it('lleva directamente a la sección cuando se entra con un ancla en la dirección', () => {
+    const scrollIntoView = vi.fn();
+    Element.prototype.scrollIntoView = scrollIntoView;
+    window.history.replaceState(null, '', '#catalogo');
+
+    renderWithProviders(<Home />);
+
+    expect(scrollIntoView).toHaveBeenCalled();
+    window.history.replaceState(null, '', '#');
+  });
+
   it('muestra el aviso vigente, deja cerrarlo y no enseña los avisos caducados', async () => {
     const user = userEvent.setup();
     const restore = withNotice({ texto: 'Cerramos por vacaciones del 1 al 15 de agosto.', hasta: '2999-12-31' });
