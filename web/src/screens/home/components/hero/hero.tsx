@@ -3,16 +3,16 @@ import { Button, ButtonJustify, ButtonVariant } from '@components/button';
 import { Eyebrow } from '@components/eyebrow';
 import { IconName } from '@components/icon';
 import { Logo, LogoVariant } from '@components/logo';
-import { Photo, PhotoRatio, PhotoTone } from '@components/photo';
+import { Photo, PhotoRatio, PhotoTone, toPhotoSources } from '@components/photo';
 import { Section, SectionTone } from '@components/section';
 import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@components/text';
-import heroPhoto from '@/assets/photos/hero-hogaza.jpg';
+import heroPhoto from '@/assets/photos/hero-photo.jpg?w=480;800;1183&format=avif;webp;jpg&as=picture';
 import { CONTENT } from '@/content';
 import { SectionId } from '@screens/components/section-nav';
 import { StoreStatus, StoreStatusVariant } from '@screens/components/store-status';
 import { HeroSeal } from '@screens/home/components/hero-seal';
 import styles from './hero.module.css';
-import { HERO_MESSAGES, HERO_TITLE_ID } from './hero.const';
+import { HERO_MESSAGES, HERO_PHOTO_SIZES, HERO_TITLE_ID } from './hero.const';
 
 export const Hero = () => {
   const { formatMessage } = useIntl();
@@ -66,7 +66,15 @@ export const Hero = () => {
       </div>
       <figure className={styles.figure}>
         <span className={styles.frame}>
-          <Photo src={heroPhoto} alt={formatMessage({ id: HERO_MESSAGES.photoAlt })} ratio={PhotoRatio.FILL} tone={PhotoTone.PEACH} eager />
+          <Photo
+            src={heroPhoto.img.src}
+            sources={toPhotoSources(heroPhoto.sources)}
+            sizes={HERO_PHOTO_SIZES}
+            priority
+            alt={formatMessage({ id: HERO_MESSAGES.photoAlt })}
+            ratio={PhotoRatio.FILL}
+            tone={PhotoTone.PEACH}
+          />
           <HeroSeal line={portada.linea} />
         </span>
       </figure>
