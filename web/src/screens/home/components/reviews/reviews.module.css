@@ -7,10 +7,22 @@
 
 .heading {
   grid-column: 1 / -1;
+}
+
+.headingBar {
   margin-bottom: 0;
 }
 
 .summary {
+  min-width: 0;
+}
+
+.listWrap {
+  min-width: 0;
+}
+
+.summary {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

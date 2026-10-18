@@ -1,0 +1,16 @@
+.reveal {
+  transition:
+    opacity 0.9s var(--ease-out-soft) var(--reveal-delay, 0ms),
+    transform 1.1s var(--ease-out-soft) var(--reveal-delay, 0ms);
+}
+
+.reveal[data-reveal='hidden'] {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+  }
+}
