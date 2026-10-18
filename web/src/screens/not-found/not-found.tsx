@@ -42,10 +42,12 @@ export const NotFound = () => {
           <SectionHeading
             label={formatMessage({ id: NOT_FOUND_MESSAGES.section })}
             number={formatMessage({ id: NOT_FOUND_MESSAGES.eyebrow })}
+            className={styles.heading}
           />
           <div className={styles.grid}>
             <div className={styles.copy}>
-              <Text kind={TypographyKinds.H1} variant={TypographyVariant.DISPLAY}>
+              <span aria-hidden="true" className={styles.halo} />
+              <Text kind={TypographyKinds.H1} variant={TypographyVariant.DISPLAY} className={styles.title}>
                 {formatMessage({ id: NOT_FOUND_MESSAGES.title }, { em: renderEmphasis })}
               </Text>
               <Text variant={TypographyVariant.BODY_M} className={styles.text}>

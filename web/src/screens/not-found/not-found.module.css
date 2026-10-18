@@ -4,7 +4,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* La 404 cabe siempre en una pantalla: los tamaños se ajustan también al alto. */
+  height: 100vh;
+  height: 100dvh;
   background: var(--color-background-base);
 }
 
@@ -40,31 +42,53 @@
 
 .main {
   flex: 1;
+  min-height: 0;
   display: flex;
-  align-items: center;
+  align-items: safe center;
 }
 
 .content {
-  padding-top: clamp(48px, 8vw, 112px);
-  padding-bottom: clamp(160px, 18vw, 260px);
+  padding-top: clamp(12px, 4vh, 72px);
+  padding-bottom: clamp(32px, 12vh, 200px);
+}
+
+.heading {
+  margin-bottom: clamp(16px, 4vh, 72px);
 }
 
 .grid {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-  gap: var(--space-8) clamp(32px, 5vw, 80px);
+  gap: clamp(12px, 3vh, 32px) clamp(32px, 5vw, 80px);
   align-items: end;
 }
 
 .copy {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+.halo {
+  position: absolute;
+  z-index: -1;
+  inset: -40px -56px -48px -56px;
+  background: var(--color-background-base);
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+.title {
+  font-size: clamp(34px, min(6vw, 8vh), 88px);
+}
+
 .text {
   max-width: 44ch;
-  margin-top: clamp(24px, 3vw, 32px);
+  margin-top: clamp(12px, 3vh, 32px);
 }
 
 .actions {
@@ -72,7 +96,7 @@
   flex-wrap: wrap;
   gap: 10px;
   width: min(100%, 420px);
-  margin-top: var(--space-8);
+  margin-top: clamp(16px, 3vh, 32px);
 }
 
 .action {
@@ -81,15 +105,24 @@
 }
 
 .code {
+  position: relative;
+  z-index: 1;
   justify-self: start;
+  align-self: center;
   font-family: var(--font-family-display);
-  font-size: clamp(120px, 22vw, 320px);
+  font-size: clamp(72px, min(28vw, 26vh), 440px);
   font-style: italic;
   font-weight: var(--font-weight-light);
   font-variant-numeric: lining-nums;
   line-height: 1;
   letter-spacing: -0.05em;
   color: var(--color-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .code {
+    justify-self: center;
+  }
 }
 
 .illustration {
