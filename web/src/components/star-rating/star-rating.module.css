@@ -1,0 +1,12 @@
+.starRating {
+  display: inline-flex;
+  color: var(--color-text-primary);
+}
+
+.size-s {
+  gap: 3px;
+}
+
+.size-m {
+  gap: 2px;
+}

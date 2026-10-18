@@ -1,0 +1,24 @@
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: var(--font-size-eyebrow);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.new {
+  background: var(--color-tag-new);
+}
+
+.seasonal {
+  background: var(--color-tag-seasonal);
+}
+
+.weekend {
+  background: var(--color-tag-weekend);
+}
+
+.neutral {
+  background: var(--color-background-subtle);
+}

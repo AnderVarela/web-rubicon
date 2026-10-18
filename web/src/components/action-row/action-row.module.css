@@ -1,0 +1,38 @@
+.actionRow {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 18px;
+  min-height: 88px;
+  padding: var(--space-4) var(--space-1);
+  border-bottom: 1px solid var(--color-line-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition-property: transform, background-color;
+  transition-duration: var(--duration-base);
+}
+
+.actionRow:active {
+  transform: scale(0.99);
+}
+
+.hoverBase:hover {
+  background: var(--color-background-base);
+}
+
+.hoverSubtle:hover {
+  background: var(--color-background-subtle);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .actionRow:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,19 @@
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-body-l);
+  color: var(--color-text-primary);
+}
+
+.peach {
+  background: var(--color-peach);
+}
+
+.rose {
+  background: var(--color-rose);
+}
