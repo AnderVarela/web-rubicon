@@ -144,6 +144,13 @@
   --z-cookie-backdrop: 96;
   --z-cookie-dialog: 97;
 
+  /* Animaciones globales (keyframes en global.css). Se usan con var() para que CSS Modules no renombre su nombre. */
+  --animation-spin: rb-spin;
+  --animation-pulse: rb-pulse;
+  --animation-shimmer: rb-shimmer;
+  --animation-rise: rb-rise;
+  --animation-fade: rb-fade;
+
   /* Movimiento */
   --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);

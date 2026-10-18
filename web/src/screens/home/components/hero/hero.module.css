@@ -20,7 +20,7 @@
 }
 
 .copy > * {
-  animation: rb-rise 0.8s var(--ease-out-soft) backwards;
+  animation: var(--animation-rise) 0.8s var(--ease-out-soft) backwards;
 }
 
 .copy > :nth-child(2) {
@@ -105,7 +105,7 @@
 .figure {
   position: relative;
   margin: 0 calc(-1 * var(--page-gutter));
-  animation: rb-fade 0.9s ease-out 200ms backwards;
+  animation: var(--animation-fade) 0.9s ease-out 200ms backwards;
 }
 
 .frame {
