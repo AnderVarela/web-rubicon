@@ -1,65 +1,108 @@
 .notFound {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  padding: clamp(24px, 4vw, 48px) var(--page-gutter);
+  background: var(--color-background-base);
+}
+
+.header {
+  height: var(--size-header);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: 100%;
 }
 
 .home {
-  align-self: flex-start;
   display: flex;
   align-items: center;
-  width: 120px;
+  width: 132px;
   height: var(--size-touch);
   color: var(--color-text-primary);
 }
 
 .logo {
-  width: 120px;
+  width: 132px;
 }
 
-.body {
+.call {
+  min-height: 40px;
+  font-size: var(--font-size-caption);
+}
+
+.main {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: clamp(40px, 5vw, 64px);
-  padding-top: var(--space-12);
-  text-align: center;
+}
+
+.content {
+  padding-top: clamp(48px, 8vw, 112px);
+  padding-bottom: clamp(160px, 18vw, 260px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: var(--space-8) clamp(32px, 5vw, 80px);
+  align-items: end;
 }
 
 .copy {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.title {
-  margin-top: var(--space-5);
-  font-size: clamp(44px, 6vw, 84px);
-  line-height: 1;
+  align-items: flex-start;
 }
 
 .text {
-  max-width: 40ch;
-  margin-top: var(--space-6);
-  line-height: var(--line-height-relaxed);
+  max-width: 44ch;
+  margin-top: clamp(24px, 3vw, 32px);
 }
 
-.back {
-  gap: var(--space-6);
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: min(100%, 420px);
   margin-top: var(--space-8);
-  padding: 0 var(--space-5);
+}
+
+.action {
+  flex: 1 1 170px;
+  white-space: nowrap;
+}
+
+.code {
+  justify-self: start;
+  font-family: var(--font-family-display);
+  font-size: clamp(120px, 22vw, 320px);
+  font-style: italic;
+  font-weight: var(--font-weight-light);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-text-secondary);
 }
 
 .illustration {
-  display: block;
-  width: min(100%, 720px);
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 0;
+  width: max(100vw, 900px);
   aspect-ratio: 523 / 174;
   background: var(--color-ink);
-  mask: url('@/assets/illustrations/cenefa.png') center bottom / contain no-repeat;
-  -webkit-mask: url('@/assets/illustrations/cenefa.png') center bottom / contain no-repeat;
+  opacity: 0.32;
+  transform: translateX(-50%);
+  mask: url('@/assets/illustrations/fondo-inicio.svg') center bottom / contain no-repeat;
+  -webkit-mask: url('@/assets/illustrations/fondo-inicio.svg') center bottom / contain no-repeat;
+  pointer-events: none;
 }

@@ -235,9 +235,10 @@
   "legal.accessibility.s4.p1": "If you find any barrier, write to us at {email} or call us on {phone}. We will reply within 20 working days at most.",
   "notFound.home": "Rubicón, go to the home page",
   "notFound.eyebrow": "Error 404",
-  "notFound.title": "We burnt <em>this loaf…</em>",
-  "notFound.text": "The page you are looking for does not exist or has moved shelves. Go back to the start: today's bread turned out much better.",
+  "notFound.title": "This page <em>never came out of the oven</em>",
+  "notFound.text": "The link may be mistyped or the page may no longer exist. What is still here is our bread.",
   "notFound.back": "Back to the home page",
-  "notFound.illustration": "Illustration of wheat ears and loaves",
-  "notFound.pageTitle": "Page not found · Panadería Rubicón"
+  "notFound.pageTitle": "Page not found · Panadería Rubicón",
+  "notFound.section": "Page not found",
+  "notFound.catalog": "See our bread"
 }

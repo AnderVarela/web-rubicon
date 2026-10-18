@@ -235,9 +235,10 @@
   "legal.accessibility.s4.p1": "Si encuentras alguna barrera, escríbenos a {email} o llámanos al {phone}. Te responderemos en un plazo máximo de 20 días hábiles.",
   "notFound.home": "Rubicón, ir al inicio",
   "notFound.eyebrow": "Error 404",
-  "notFound.title": "Esta hogaza se nos ha <em>quemado…</em>",
-  "notFound.text": "La página que buscas no existe o se ha movido de estantería. Vuelve al principio, que el pan de hoy ha salido mucho mejor.",
+  "notFound.title": "Esta página <em>no ha salido del horno</em>",
+  "notFound.text": "Puede que el enlace esté mal escrito o que la página ya no exista. Lo que sí sigue en su sitio es nuestro pan.",
   "notFound.back": "Volver al inicio",
-  "notFound.illustration": "Ilustración de espigas y panes",
-  "notFound.pageTitle": "Página no encontrada · Panadería Rubicón"
+  "notFound.pageTitle": "Página no encontrada · Panadería Rubicón",
+  "notFound.section": "Página no encontrada",
+  "notFound.catalog": "Ver nuestro pan"
 }
