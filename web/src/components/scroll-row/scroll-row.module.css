@@ -24,3 +24,13 @@
 .gap-m {
   gap: var(--space-5);
 }
+
+@media (min-width: 1024px) {
+  .desktopGrid {
+    display: grid;
+    grid-template-columns: repeat(var(--scroll-row-columns), minmax(0, 1fr));
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+}
