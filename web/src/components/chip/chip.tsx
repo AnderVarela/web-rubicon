@@ -7,21 +7,39 @@ export interface ChipProps {
   selected?: boolean;
   role?: 'tab';
   controls?: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
+  href?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
 }
 
-// Botón de filtro o salto con contador («Panes 6»).
-export const Chip = ({ label, count, selected = false, role, controls, onClick }: ChipProps) => (
-  <button
-    type="button"
-    role={role}
-    aria-selected={role ? selected : undefined}
-    aria-controls={controls}
-    className={[styles.chip, selected && styles.selected].filter(Boolean).join(' ')}
-    onClick={onClick}
-  >
-    {label}
-    {count !== undefined && ' '}
-    {count !== undefined && <span className={styles.count}>{count}</span>}
-  </button>
-);
+// Filtro o salto con contador («Panes 6»). Con href es un enlace a un ancla.
+export const Chip = ({ label, count, selected = false, role, controls, href, onClick }: ChipProps) => {
+  const className = [styles.chip, selected && styles.selected].filter(Boolean).join(' ');
+  const content = (
+    <>
+      {label}
+      {count !== undefined && ' '}
+      {count !== undefined && <span className={styles.count}>{count}</span>}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} className={className} onClick={onClick}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      role={role}
+      aria-selected={role ? selected : undefined}
+      aria-controls={controls}
+      className={className}
+      onClick={onClick}
+    >
+      {content}
+    </button>
+  );
+};
