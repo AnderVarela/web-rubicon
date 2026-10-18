@@ -1,0 +1,18 @@
+.actionTile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 76px;
+  padding: 14px var(--space-3);
+  background: var(--color-background-inverse);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-body-s);
+  text-decoration: none;
+  outline-color: var(--color-focus-ring-inverse);
+  transition: background-color var(--duration-base);
+}
+
+.actionTile:hover {
+  background: var(--color-ink-soft);
+  color: var(--color-text-inverse);
+}
