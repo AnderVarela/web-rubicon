@@ -1,0 +1,66 @@
+.iconButton {
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition-property: transform, background-color, color, border-color, opacity;
+  transition-duration: var(--duration-base);
+}
+
+.iconButton:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.iconButton:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.size-m {
+  width: var(--size-touch);
+  height: var(--size-touch);
+}
+
+.size-l {
+  width: var(--size-touch-l);
+  height: var(--size-touch-l);
+}
+
+.outline {
+  border-color: var(--color-line-control);
+}
+
+.outline:hover:not(:disabled),
+.ghost:hover:not(:disabled) {
+  background: var(--color-background-subtle);
+}
+
+.outlineInverse {
+  border-color: var(--color-text-inverse);
+  color: var(--color-text-inverse-muted);
+  outline-color: var(--color-focus-ring-inverse);
+}
+
+.outlineInverse:hover {
+  background: var(--color-background-base);
+}
+
+.ghostInverse {
+  color: var(--color-text-inverse);
+  outline-color: var(--color-focus-ring-inverse);
+}
+
+.ghostInverse:hover {
+  background: var(--color-ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iconButton:active:not(:disabled) {
+    transform: none;
+  }
+}
