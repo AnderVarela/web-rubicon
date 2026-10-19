@@ -8,5 +8,5 @@ export const CATALOG_MESSAGES = {
   intro: 'catalog.intro',
   categories: 'catalog.categories',
   priceNote: 'catalog.priceNote',
-  empty: 'catalog.empty',
+  introEmpty: 'catalog.introEmpty',
 } as const;

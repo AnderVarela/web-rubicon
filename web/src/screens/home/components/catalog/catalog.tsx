@@ -10,10 +10,11 @@ import { Text, TypographyKinds, TypographyTone, TypographyVariant } from '@compo
 import { CONTENT, type Producto } from '@/content';
 import { SectionId } from '@screens/components/section-nav';
 import { CategoryRow, getCategoryAnchor } from '@screens/home/components/category-row';
+import { CatalogEmpty } from '@screens/home/components/catalog-empty';
 import { ProductSheet } from '@screens/home/components/product-sheet';
 import styles from './catalog.module.css';
 import { CATALOG_MESSAGES, CATALOG_NUMBER, CATALOG_TITLE_ID } from './catalog.const';
-import { findCategoryName } from './catalog.helper';
+import { findCategoryName, getIntroMessage } from './catalog.helper';
 
 export const Catalog = () => {
   const { formatMessage } = useIntl();
@@ -34,7 +35,7 @@ export const Catalog = () => {
           {formatMessage({ id: CATALOG_MESSAGES.title }, { em: renderEmphasis })}
         </Text>
         <Text variant={TypographyVariant.BODY_M} className={styles.lead}>
-          {formatMessage({ id: CATALOG_MESSAGES.intro })}
+          {formatMessage({ id: getIntroMessage(catalogo) })}
         </Text>
       </Reveal>
       {catalogo.length ? (
@@ -57,7 +58,9 @@ export const Catalog = () => {
           </div>
         </>
       ) : (
-        <Text variant={TypographyVariant.BODY_L}>{formatMessage({ id: CATALOG_MESSAGES.empty })}</Text>
+        <Reveal delay={120}>
+          <CatalogEmpty />
+        </Reveal>
       )}
       <ProductSheet product={selected} categoryName={findCategoryName(catalogo, selected)} onClose={() => setSelected(null)} />
     </Section>

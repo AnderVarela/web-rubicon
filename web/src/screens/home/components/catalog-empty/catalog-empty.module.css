@@ -1,0 +1,96 @@
+.catalogEmpty {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: clamp(32px, 4vw, 48px) var(--space-12);
+  align-items: center;
+  padding: clamp(32px, 4vw, 56px) 0 clamp(8px, 2vw, 24px);
+  border-top: 1px solid var(--color-line);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  margin-top: var(--space-5);
+}
+
+.text {
+  max-width: 42ch;
+  margin-top: var(--space-5);
+  line-height: var(--line-height-relaxed);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: min(100%, 440px);
+  margin-top: var(--space-7);
+}
+
+.whatsapp {
+  flex: 1 1 250px;
+  white-space: nowrap;
+}
+
+.phone {
+  flex: 1 1 150px;
+  font-variant-numeric: tabular-nums;
+}
+
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vw, 20px);
+  width: 100%;
+  max-width: 400px;
+  justify-self: end;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.raised {
+  transform: translateY(clamp(16px, 2.4vw, 32px));
+}
+
+.frame {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  background: var(--color-background-subtle);
+  border: 1px dashed var(--color-line-dashed);
+}
+
+.frame .slotIcon {
+  width: clamp(22px, 2.4vw, 30px);
+  height: clamp(22px, 2.4vw, 30px);
+  opacity: 0.55;
+}
+
+.caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.rule {
+  display: block;
+  width: 62%;
+  height: 1px;
+  background: var(--color-line-rule);
+}

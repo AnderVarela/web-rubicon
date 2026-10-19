@@ -15,6 +15,7 @@ export enum TypographyKinds {
 export enum TypographyVariant {
   DISPLAY = 'display',
   DISPLAY_NUMBER = 'displayNumber',
+  DISPLAY_XL = 'displayXl',
   TITLE_XL = 'titleXl',
   TITLE_L = 'titleL',
   TITLE_M = 'titleM',
