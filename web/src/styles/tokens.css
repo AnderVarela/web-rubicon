@@ -33,6 +33,8 @@
   --color-line: rgb(59 42 32 / 16%);
   --color-line-medium: rgb(59 42 32 / 22%);
   --color-line-control: rgb(59 42 32 / 30%);
+  --color-line-rule: rgb(59 42 32 / 28%);
+  --color-line-dashed: rgb(59 42 32 / 32%);
   --color-line-inverse: rgb(251 246 239 / 16%);
 
   /* Etiquetas de producto */
@@ -73,6 +75,7 @@
 
   --font-size-display: clamp(42px, 6vw, 88px);
   --font-size-display-l: clamp(72px, 8vw, 104px);
+  --font-size-display-xl: clamp(56px, 8vw, 120px);
   --font-size-title-xl: clamp(40px, 5vw, 64px);
   --font-size-title-l: 38px;
   --font-size-title-m: clamp(26px, 2.6vw, 34px);

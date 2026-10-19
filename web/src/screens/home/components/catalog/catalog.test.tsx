@@ -27,13 +27,15 @@ describe('Catalog', () => {
     expect(card).toHaveFocus();
   });
 
-  it('avisa de que el catálogo llegará pronto si web.json no trae categorías', () => {
+  it('muestra «Próximamente» en lugar de las categorías si web.json no trae catálogo', () => {
     const original = CONTENT.catalogo;
     CONTENT.catalogo = [];
     renderWithProviders(<Catalog />);
 
-    expect(screen.getByText(t('catalog.empty'))).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: t('catalog.soon.title').replace(/<\/?em>/g, '') })).toBeInTheDocument();
+    expect(screen.getByText(t('catalog.introEmpty'))).toBeInTheDocument();
     expect(screen.queryByRole('navigation', { name: t('catalog.categories') })).not.toBeInTheDocument();
+    expect(screen.queryByText(t('catalog.priceNote'))).not.toBeInTheDocument();
     CONTENT.catalogo = original;
   });
 });

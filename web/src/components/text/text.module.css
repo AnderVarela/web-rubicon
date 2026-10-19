@@ -22,6 +22,14 @@
   letter-spacing: var(--letter-spacing-display);
 }
 
+.displayXl {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-display-xl);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
 .titleXl {
   font-family: var(--font-family-display);
   font-weight: var(--font-weight-light);
