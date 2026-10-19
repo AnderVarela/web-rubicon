@@ -12,6 +12,7 @@ import { SiteFooter } from '@screens/components/site-footer';
 import { LegalDocNav } from '@screens/legal/components/legal-doc-nav';
 import { LegalHeader } from '@screens/legal/components/legal-header';
 import { LegalSection } from '@screens/legal/components/legal-section';
+import { useDocumentFocus } from '@screens/legal/hooks/use-document-focus';
 import styles from './legal.module.css';
 import { LEGAL_DOCUMENT_CONTENT, LEGAL_MAIN_ID, LEGAL_MESSAGES, LEGAL_UPDATED_AT } from './legal.const';
 import { getContactValues } from './legal.helper';
@@ -25,6 +26,7 @@ export const Legal = ({ documentId }: LegalProps) => {
   const document = LEGAL_DOCUMENT_CONTENT[documentId];
   const title = intl.formatMessage({ id: document.titleId });
   const values = getContactValues(CONTENT.contacto);
+  useDocumentFocus(documentId, LEGAL_MAIN_ID);
   useDocumentTitle(intl.formatMessage({ id: LEGAL_MESSAGES.pageTitle }, { title }));
 
   return (
