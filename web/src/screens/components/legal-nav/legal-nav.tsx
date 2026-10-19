@@ -3,6 +3,7 @@ import { Button, ButtonSize, ButtonVariant } from '@components/button';
 import { useConsent } from '@hooks/use-consent';
 import styles from './legal-nav.module.css';
 import { LEGAL_DOCUMENTS, LEGAL_NAV_MESSAGES } from './legal-nav.const';
+import { followLegalLink } from './legal-nav.helper';
 
 // Enlaces legales del pie y acceso a la configuración de cookies.
 export const LegalNav = () => {
@@ -14,7 +15,7 @@ export const LegalNav = () => {
       <ul className={styles.list}>
         {LEGAL_DOCUMENTS.map((document) => (
           <li key={document.id}>
-            <Button href={document.path} variant={ButtonVariant.LINK_INVERSE} size={ButtonSize.S}>
+            <Button href={document.path} onClick={followLegalLink(document.path)} variant={ButtonVariant.LINK_INVERSE} size={ButtonSize.S}>
               {formatMessage({ id: document.messageId })}
             </Button>
           </li>
